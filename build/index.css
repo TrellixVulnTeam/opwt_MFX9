@@ -31,6 +31,8 @@ body {
   font-size: var(--font-size);
   line-height: var(--line-height);
   background-color: var(--background-color);
+  background-image: url(src/scacchiera.svg);
+  background-size: cover;
 }
 
 .overlay {
@@ -41,7 +43,9 @@ body {
   left: 0;
   top: 0;
   background-color: var(--black);
-  /* Black fallback color */
+  background-image: url(src/scacchiera.svg);
+  background-size: cover;
+  background-position: center center;
   overflow: hidden;
   /* Disable horizontal scroll */
   transition: 0.5s;
@@ -68,9 +72,9 @@ body {
   }
 }
 .overlay-content a {
-  padding: 8px;
   text-decoration: none;
-  font-size: 36px;
+  font-family: var(--font-grande);
+  font-size: 48px;
   font-weight: 300;
   color: var(--background-color);
   opacity: 0.7;
@@ -84,27 +88,34 @@ body {
     text-align: center;
     opacity: 1;
     font-size: 60px;
+    color: var(--black);
     font-family: var(--font-grande);
     margin-bottom: 3%;
   }
   .overlay-content a:nth-child(1) {
-    background-color: var(--gold);
+    background-image: url(src/open.png);
+    background-size: cover;
+    background-position: center center;
   }
   .overlay-content a:nth-child(2) {
-    background-color: var(--blue);
+    background-image: url(src/sea.jpg);
+    background-size: cover;
+    background-position: center center;
   }
   .overlay-content a:nth-child(3) {
-    background-color: var(--red);
+    background-image: url(src/raftel.png);
+    background-size: cover;
+    background-position: center center;
   }
 }
 .overlay-content a:hover {
-  font-size: var(--font-large);
+  font-size: 48px;
   opacity: 1;
   color: var(--gold);
 }
 @media screen and (max-width: 1024px) {
   .overlay-content a:hover {
-    color: var(--background-color);
+    color: var(--black);
     font-size: 60px;
   }
 }
@@ -113,7 +124,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .overlay-content a:focus {
-    font-size: 62px;
+    font-size: 60px;
   }
 }
 
@@ -149,7 +160,7 @@ body {
   bottom: 50px;
   right: -20px;
   line-height: 0;
-  color: var(--gold);
+  color: var(--background-color);
   font-size: 450px;
   font-family: var(--font-grande);
   transition: opacity 800ms var(--ease);
@@ -200,7 +211,6 @@ body {
   width: 42px;
   height: 42px;
   padding: 0px;
-  fill: var(--black);
 }
 
 .closebtn {

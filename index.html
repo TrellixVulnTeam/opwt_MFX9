@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
 <div id="myNav" class="overlay">
   <p><img src="build/src/map.png" alt="maps" class="img_menu" id="img_map">
   <img src="build/src/seas.png" alt="seas" class="img_menu" id="img_sea">
@@ -35,7 +34,7 @@ stroke-width="12"/>
   <div class="overlay-content">
     <!--pensare se vogliamo per caso anche il timoncino a lato-->
     <!--<a href="#">Home</a>-->
-    <a href="#" id="link_map">Open World</a>
+    <a href="#" id="link_map"><nobr>Open World</nobr></a>
     <a href="#" id="link_sea">Seas</a>
     <a href="#" id="link_island">Islands</a>
   </div>
@@ -52,8 +51,8 @@ stroke-width="12"/>
 
 
   <main class="main-content">
-    <img src="build/src/logo_esteso.png" alt="ONE PIECE" class="logo_op">
-    <h2>World Map</h2>
+  <!-- <img src="build/src/logo_esteso.png" alt="ONE PIECE" class="logo_op">
+    <h2>World Map</h2>-->
 
   </main>
 
@@ -87,7 +86,7 @@ $(function() {
     $(window).resize(function() {
         delay(function() {
           var width = $(window).width();
-          if( width >= 1024 ) {
+          if( width > 1024 ) {
             $("#link_map").hover(function(){
               $('#img_map').css("opacity", "1");
               $('#text_map').css("opacity", "0.3");
