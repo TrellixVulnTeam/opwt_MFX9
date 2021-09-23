@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --blue: #0055b3;
+  --red: #ff0000;
+  --black: #1b1e23;
+  --gold: #fcc201;
+  --background-color: #e6e6e6;
+  --duration: 1s;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --space: 1rem;
+  --font-primary: 'Quicksand', sans-serif;
+  --font-heading: 'Bebas Neue', cursive;
+  --font-grande: 'Bebas Neue', cursive;
+  --font-large: 36px;
+  --font-medium: 30px;
+  --font-text: 18px;
+  --font-large-m: 21px;
+  --font-medium-m: 18px;
+  --font-text-m: 16px;
+  --line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-color: var(--background-color);
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: var(--black); /* Black fallback color */
+  overflow: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 10%;
+  left: 9%;
+  width: 50%;
+  text-align: left;
+
+  @media screen and (max-width:1024px) {
+  /*  left: 0px;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    margin: 0;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+  }
+
+  @media screen and (max-width:768px) {
+
+  }
+
+  @media screen and (max-width:480px) {
+
+  }
+}
+
+.overlay-content a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--background-color);
+  opacity: 0.7;
+  display: block;
+  transition: 400ms ease-out;
+
+  @media screen and (max-width:1024px) {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    opacity: 1;
+    font-size: 60px;
+    font-family: var(--font-grande);
+    margin-bottom: 3%;
+
+    &:nth-child(1) {
+      background-color: var(--gold);
+    }
+
+    &:nth-child(2) {
+      background-color: var(--blue);
+    }
+
+    &:nth-child(3) {
+      background-color: var(--red);
+    }
+  }
+
+
+  &:hover {
+    font-size: var(--font-large);
+    opacity: 1;
+    color: var(--gold);
+
+    @media screen and (max-width:1024px) {
+       color: var(--background-color);
+       font-size: 60px;
+    }
+
+  }
+
+  &:focus {
+    opacity: 1;
+
+    @media screen and (max-width:1024px) {
+        font-size: 62px;
+    }
+  }
+}
+
+.overlay img{
+  position: absolute;
+  right: 0px;
+  transition: opacity 800ms ease-out;
+}
+
+#img_map {
+  transform: translateX(-30vw);
+  opacity: 0;
+  max-width: 80%;
+  top: 0px;
+}
+
+#img_sea {
+  transform: translateX(-5vw);
+  opacity: 0;
+  max-height: 90%;
+  top: 0px;
+}
+
+#img_island {
+  opacity: 0;
+  bottom: 0px;
+  max-width: 50%;
+}
+
+.big_text {
+  position: absolute;
+  margin: 0px;
+  bottom: 50px;
+  right:-20px;
+  line-height: 0;
+  color: var(--gold);
+  font-size: 450px;
+  font-family: var(--font-grande);
+  transition: opacity 800ms var(--ease);
+}
+
+#text_map, #text_sea, #text_island {
+  opacity: 0;
+
+  @media screen and (max-width:1024px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  left: 9%;
+  bottom: 10%;
+  width:42px;
+  height: 42px;
+  fill: var(--black);
+
+  @media screen and (max-width:480px) {
+    right: 4%;
+    top: 3%;
+    left: auto;
+  }
+}
+
+.hamburger:checked {
+  ~ .overlay {
+    transition-duration: 0s;
+    transform: translateX(0);
+}
+&:after {
+     animation: nav-bg 1s var(--ease) forwards;
+   }
+}
+
+@keyframes nav-bg {
+  from { transform: translateX(-100%) skewX(-15deg) }
+  to { transform: translateX(0) }
+}
+
+.close-icon {
+  width:42px;
+  height: 42px;
+  padding: 0px;
+  fill: var(--black);
+}
+
+ .closebtn {
+  position: absolute;
+  right: 9%;
+  top: 10%;
+  fill: var(--background-color);
+  opacity: 0.7;
+  transition: 400ms ease-out;
+  padding: 0px;
+
+  @media screen and (max-width:480px) {
+    right: 4%;
+    top: 3%;
+    left: auto;
+    opacity: 1;
+  }
+
+  &:hover {
+    font-size: var(--font-large);
+    opacity: 1;
+    color: var(--gold)
+  }
+
+  &:focus {
+    font-size: var(--font-large);
+    opacity: 1;
+  }
+}
+
+.main-content {
+  position: absolute;
+  width: 82%;
+  margin-left: 9%;
+  margin-top: 10%;
+}
+
+.logo_op {
+  max-width: 100px;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 128px;
+  margin: 0px;
+  color: var(--gold);
+  font-weight: 100;
+}

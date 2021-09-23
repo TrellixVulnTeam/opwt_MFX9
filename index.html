@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+  <title>One Piece - World Map</title>
+  <link rel="stylesheet" href="build/index.css">
+  <link rel="icon" href="build/src/logo.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<div id="myNav" class="overlay">
+  <p><img src="build/src/map.png" alt="maps" class="img_menu" id="img_map">
+  <img src="build/src/seas.png" alt="seas" class="img_menu" id="img_sea">
+  <img src="build/src/island.png" alt="island" class="img_menu" id="img_island">
+  <p id="text_map" class="big_text"><nobr>OPEN WORLD</nobr></p>
+  <p id="text_sea" class="big_text">SEAS</p>
+  <p id="text_island" class="big_text">ISLANDS</p>
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+    <svg class="close-icon" viewBox="0 0 100 100">
+
+<line x1="15" y1="85"
+x2="85" y2="15"
+stroke="#e6e6e6"
+stroke-linecap="round"
+stroke-width="12"/>
+<line x1="15" y1="15"
+x2="85" y2="85"
+stroke="#e6e6e6"
+stroke-linecap="round"
+stroke-width="12"/>
+</svg>
+</a>
+
+  <div class="overlay-content">
+    <!--pensare se vogliamo per caso anche il timoncino a lato-->
+    <!--<a href="#">Home</a>-->
+    <a href="#" id="link_map">Open World</a>
+    <a href="#" id="link_sea">Seas</a>
+    <a href="#" id="link_island">Islands</a>
+  </div>
+
+</div>
+
+<span onclick="openNav()">
+  <svg class="hamburger" viewBox="0 0 100 80">
+      <rect width="100" height="15" rx="8"></rect>
+      <rect y="30" width="100" height="15" rx="8"></rect>
+      <rect y="60" width="100" height="15" rx="8"></rect>
+  </svg>
+</span>
+
+
+  <main class="main-content">
+    <img src="build/src/logo_esteso.png" alt="ONE PIECE" class="logo_op">
+    <h2>World Map</h2>
+
+  </main>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+/* Open when someone clicks on the span element */
+function openNav() {
+document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+document.getElementById("myNav").style.width = "0%";
+}
+
+var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+        clearTimeout (timer);
+        timer = setTimeout(callback, ms);
+    };
+})();
+
+$(function() {
+    var pause = 100;
+
+    $(window).resize(function() {
+        delay(function() {
+          var width = $(window).width();
+          if( width >= 1024 ) {
+            $("#link_map").hover(function(){
+              $('#img_map').css("opacity", "1");
+              $('#text_map').css("opacity", "0.3");
+              }, function(){
+              $('#img_map').css("opacity", "0");
+              $('#text_map').css("opacity", "0");
+            });
+
+            $("#link_sea").hover(function(){
+              $('#text_sea').css("opacity", "0.3");
+              $('#img_sea').css("opacity", "1");
+              }, function(){
+              $('#text_sea').css("opacity", "0");
+              $('#img_sea').css("opacity", "0");
+            });
+
+            $("#link_island").hover(function(){
+              $('#img_island').css("opacity", "1");
+              $('#text_island').css("opacity", "0.3");
+              }, function(){
+              $('#img_island').css("opacity", "0");
+              $('#text_island').css("opacity", "0");
+            });
+          }
+        }, pause );
+    });
+
+    $(window).resize();
+});
+
+</script>
+
+</body>
+</html>
