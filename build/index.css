@@ -26,13 +26,19 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+  background-color: var(--background-color);
+  background-image: url(src/down.svg);
+  background-size: cover;
+  background-position: center center;
+}
+
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size);
   line-height: var(--line-height);
   background-color: var(--background-color);
-  background-image: url(src/scacchiera.svg);
-  background-size: cover;
 }
 
 .overlay {
@@ -90,22 +96,41 @@ body {
     font-size: 60px;
     color: var(--black);
     font-family: var(--font-grande);
-    margin-bottom: 3%;
+    padding: 4vh 0px 3vh 0px;
   }
   .overlay-content a:nth-child(1) {
     background-image: url(src/open.png);
     background-size: cover;
     background-position: center center;
+    margin-bottom: 2%;
   }
   .overlay-content a:nth-child(2) {
     background-image: url(src/sea.jpg);
     background-size: cover;
     background-position: center center;
+    margin-bottom: 2%;
   }
   .overlay-content a:nth-child(3) {
     background-image: url(src/raftel.png);
     background-size: cover;
     background-position: center center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .overlay-content a {
+    padding: 4vh 0px 3vh 0px;
+  }
+  .overlay-content a:nth-child(1) {
+    background-image: url(src/open.png);
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 3%;
+  }
+  .overlay-content a:nth-child(2) {
+    background-image: url(src/sea.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 3%;
   }
 }
 .overlay-content a:hover {

@@ -87,6 +87,9 @@ $(function() {
         delay(function() {
           var width = $(window).width();
           if( width > 1024 ) {
+            $('#img_map').css("display", "block");
+            $('#img_sea').css("display", "block");
+            $('#img_island').css("display", "block");
             $("#link_map").hover(function(){
               $('#img_map').css("opacity", "1");
               $('#text_map').css("opacity", "0.3");
@@ -110,6 +113,11 @@ $(function() {
               $('#img_island').css("opacity", "0");
               $('#text_island').css("opacity", "0");
             });
+
+          } else {
+             $('#img_map').css("display", "none");
+             $('#img_sea').css("display", "none");
+             $('#img_island').css("display", "none");
           }
         }, pause );
     });
