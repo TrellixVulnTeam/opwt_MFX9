@@ -410,6 +410,13 @@ body {
     left: auto;
   }
 }
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .hamburger {
+    right: 9%;
+    top: 8%;
+    left: auto;
+  }
+}
 
 .hamburger:checked ~ .overlay {
   transition-duration: 0s;
@@ -462,6 +469,14 @@ body {
 @media screen and (max-width: 480px) {
   .closebtn {
     right: 5%;
+    top: 5%;
+    left: auto;
+    opacity: 1;
+  }
+}
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .closebtn {
+    right: 9%;
     top: 5%;
     left: auto;
     opacity: 1;

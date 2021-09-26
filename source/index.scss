@@ -455,6 +455,14 @@ body {
     top: 5%;
     left: auto;
   }
+
+  @media screen
+  and (max-device-width: 1023px)
+  and (orientation: landscape) {
+    right: 9%;
+    top: 8%;
+    left: auto;
+  }
 }
 
 .hamburger:checked {
@@ -504,6 +512,15 @@ body {
 
   @media screen and (max-width:480px) {
     right: 5%;
+    top: 5%;
+    left: auto;
+    opacity: 1;
+  }
+
+  @media screen
+  and (max-device-width: 1023px)
+  and (orientation: landscape) {
+    right: 9%;
     top: 5%;
     left: auto;
     opacity: 1;
