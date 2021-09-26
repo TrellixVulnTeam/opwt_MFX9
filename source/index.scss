@@ -54,14 +54,114 @@ body {
   animation-timing-function: linear;
   transform-origin: 30px 30px;
 }
-/*
-}
+
 @-moz-keyframes turn {
-    100% { -moz-transform: rotate(360deg); }
-}
+  0% {
+      -moz-transform: translate(-4300px, -300px);
+      opacity: 0;
+  }
+ 5% {
+   opacity: 1;
+ }
+
+ 27% {
+   opacity: 1;
+ }
+
+ 32% {
+   -moz-transform: translate(-4100px, -700px);
+   opacity: 0;
+ }
+
+ 33% {
+   -moz-transform: translate(-1100px, -800px);
+   opacity: 0;
+ }
+
+ 38% {
+   opacity: 1;
+ }
+
+ 60% {
+   opacity: 1;
+ }
+
+ 65% {
+   -moz-transform: translate(-1600px, -1100px);
+   opacity: 0;
+ }
+
+ 66% {
+   -moz-transform: translate(-1500, -100px);
+   opacity: 0;
+ }
+
+ 71% {
+   opacity: 1;
+ }
+
+ 95% {
+   opacity: 1;
+ }
+
+ 100% {
+   -moz-transform: translate(-1000px, -500px);
+   opacity: 0;
+ }}
 @-webkit-keyframes turn {
-    100% { -webkit-transform: rotate(360deg); }
-}*/
+  0% {
+      -webkit-transform: translate(-4300px, -300px);
+      opacity: 0;
+  }
+ 5% {
+   opacity: 1;
+ }
+
+ 27% {
+   opacity: 1;
+ }
+
+ 32% {
+   -webkit-transform: translate(-4100px, -700px);
+   opacity: 0;
+ }
+
+ 33% {
+   -webkit-transform: translate(-1100px, -800px);
+   opacity: 0;
+ }
+
+ 38% {
+   opacity: 1;
+ }
+
+ 60% {
+   opacity: 1;
+ }
+
+ 65% {
+   -webkit-transform: translate(-1600px, -1100px);
+   opacity: 0;
+ }
+
+ 66% {
+   -webkit-transform: translate(-1500px, -100px);
+   opacity: 0;
+ }
+
+ 71% {
+   opacity: 1;
+ }
+
+ 95% {
+   opacity: 1;
+ }
+
+ 100% {
+   -webkit-transform: translate(-1000px, -500px);
+   opacity: 0;
+ }
+}
 @keyframes home {
   0% {
       -webkit-transform: translate(-4300px, -300px);
@@ -135,8 +235,8 @@ body {
   background-image: url(src/scacchiera.svg);
   background-size: cover;
   background-position: center center;
-  overflow: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 .overlay-content {
@@ -152,9 +252,9 @@ body {
     text-align: center;
     height: fit-content;
     margin: 0;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
   @media screen and (max-width:768px) {
@@ -256,12 +356,12 @@ transform: translateY(-50%);
 #img_map {
   transform: translateX(-30vw);
   opacity: 0;
-  max-width: 80%;
+  max-width: 55%;
   top: 0px;
 }
 
 #img_sea {
-  transform: translateX(-5vw);
+  transform: translateX(-15vw);
   opacity: 0;
   max-height: 90%;
   top: 0px;
@@ -421,7 +521,7 @@ svg:hover #openturn, {
 }
 
 svg #openturn {
-  opacity: 1; 
+  opacity: 1;
 }
 /*
 }
