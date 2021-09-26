@@ -30,9 +30,7 @@
 html {
   height: 100vh;
   background-color: var(--background-color);
-  background-image: url(src/down.svg);
-  background-size: cover;
-  background-position: center center;
+  overflow: hidden;
 }
 
 body {
@@ -42,6 +40,78 @@ body {
   background-color: var(--background-color);
 }
 
+#home_map {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 2200px;
+  -webkit-animation: home 30s;
+  -moz-animation: home 30s;
+  animation: home 30s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 30px 30px;
+}
+
+/*
+}
+@-moz-keyframes turn {
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes turn {
+    100% { -webkit-transform: rotate(360deg); }
+}*/
+@keyframes home {
+  0% {
+    -webkit-transform: translate(-4300px, -300px);
+    transform: translate(-4300px, -300px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  27% {
+    opacity: 1;
+  }
+  32% {
+    -webkit-transform: translate(-4100px, -700px);
+    transform: translate(-4100px, -700px);
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: translate(-1100px, -800px);
+    transform: translate(-1100px, -800px);
+    opacity: 0;
+  }
+  38% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    -webkit-transform: translate(-1600px, -1100px);
+    transform: translate(-1600px, -1100px);
+    opacity: 0;
+  }
+  66% {
+    -webkit-transform: translate(-1500px, -100px);
+    transform: translate(-1500, -100px);
+    opacity: 0;
+  }
+  71% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-1000px, -500px);
+    transform: translate(-1000px, -500px);
+    opacity: 0;
+  }
+}
 .overlay {
   height: 100%;
   width: 0;
@@ -325,6 +395,10 @@ svg:hover #openturn {
   animation-iteration-count: infinite;
   animation-timing-function: var(--ease);
   transform-origin: 30px 30px;
+}
+
+svg #openturn {
+  opacity: 1;
 }
 
 /*
