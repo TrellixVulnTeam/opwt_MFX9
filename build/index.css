@@ -299,11 +299,17 @@ body {
 }
 @media screen and (max-device-width: 1023px) and (orientation: landscape) {
   .overlay-content a {
-    padding: 2vh 0px 1vh 0px;
+    padding: 4vh 0px 3vh 0px;
     font-size: 45px;
     width: 140%;
-    transform: rotate(15deg) translateX(-20vw) translateY(10vh);
+    transform: rotate(20deg) translateX(-20vw) translateY(15vh);
     transform-origin: center center;
+  }
+  .overlay-content a:nth-child(1) {
+    margin-bottom: 4vh;
+  }
+  .overlay-content a:nth-child(2) {
+    margin-bottom: 4vh;
   }
 }
 .overlay-content a:hover {
@@ -435,6 +441,7 @@ body {
   opacity: 0.7;
   transition: 400ms ease-out;
   padding: 0px;
+  z-index: 99;
 }
 @media screen and (max-width: 1024px) {
   .closebtn {
