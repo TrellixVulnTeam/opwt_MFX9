@@ -41,6 +41,96 @@ body {
   background-color: var(--background-color);
 }
 
+.caricamento {
+    height: 100%;
+    width: 100%;
+    background: var(--background-color);
+    background-image: url(build/src/home_map.svg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+}
+
+.caricamento .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60px;
+}
+
+.caricamento .preloader_text {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--gold);
+    animation: opacity 3s ease-in-out infinite;
+}
+
+@keyframes opacity {
+  0% {opacity: 0};
+  50% {opacity: 1};
+  100% {opacity: 0};
+}
+
+.load {
+  -webkit-animation: load 3s var(--ease) infinite;
+  -moz-animation: load 3s var(--ease) infinite;
+  animation: load 3s var(--ease) infinite;
+  transform-origin: center center;
+}
+
+#load {
+  fill: var(--gold);
+}
+
+@-moz-keyframes load {
+  0% {
+      -moz-transform: rotate(0deg);
+      -moz-transform:rotate(0deg);
+  }
+  30% {
+      -moz-transform: rotate(360deg);
+      -moz-transform:rotate(360deg);
+  }
+    100% {
+        -moz-transform: rotate(270deg);
+        -moz-transform:rotate(270deg);
+    }
+}
+@-webkit-keyframes load {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+  30% {
+      -webkit-transform: rotate(360deg);
+  }
+    100% {
+        -webkit-transform: rotate(270deg);
+    }
+}
+@keyframes load {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform:rotate(0deg);
+  }
+  30% {
+      -webkit-transform: rotate(360deg);
+      transform:rotate(360deg);
+  }
+    100% {
+        -webkit-transform: rotate(270deg);
+        transform:rotate(270deg);
+    }
+}
+
 .background_animat {
   position: absolute;
   top: 0px;
@@ -64,7 +154,7 @@ body {
   transform-origin: 30px 30px;
 }
 
-@-moz-keyframes turn {
+@-moz-keyframes home {
   0% {
       -moz-transform: translate(-4300px, -300px);
       opacity: 0;
@@ -117,7 +207,7 @@ body {
    -moz-transform: translate(-1000px, -500px);
    opacity: 0;
  }}
-@-webkit-keyframes turn {
+@-webkit-keyframes home {
   0% {
       -webkit-transform: translate(-4300px, -300px);
       opacity: 0;
@@ -290,6 +380,17 @@ body {
   display: block;
   transition: 400ms ease-out;
 
+  &:hover {
+    font-size: 48px;
+    opacity: 1;
+    color: var(--gold);
+  }
+
+  &:focus {
+    opacity: 1;
+    }
+
+
   @media screen and (max-width:1024px) {
     width: 100%;
     height: auto;
@@ -299,6 +400,12 @@ body {
     color: var(--black);
     font-family: var(--font-grande);
     padding: 4vh 0px 3vh 0px;
+
+    &:hover {
+      font-size: 60px;
+      opacity: 1;
+      color: var(--black);
+    }
 
     &:nth-child(1) {
       background-image: url(src/mappe_tel.png);
@@ -358,26 +465,6 @@ body {
 
     &:nth-child(2) {
       margin-bottom: 4vh;
-    }
-  }
-
-  &:hover {
-    font-size: 48px;
-    opacity: 1;
-    color: var(--gold);
-
-    @media screen and (max-width:1024px) {
-       color: var(--black);
-       font-size: 60px;
-    }
-
-  }
-
-  &:focus {
-    opacity: 1;
-
-    @media screen and (max-width:1024px) {
-        font-size: 60px;
     }
   }
 }
@@ -460,7 +547,7 @@ body {
   and (max-device-width: 1023px)
   and (orientation: landscape) {
     right: 9%;
-    top: 8%;
+    top: 9%;
     left: auto;
   }
 }
@@ -496,6 +583,17 @@ body {
   padding: 0px;
   z-index: 99;
 
+  &:hover {
+    font-size: var(--font-large);
+    opacity: 1;
+    color: var(--gold)
+  }
+
+  &:focus {
+    font-size: var(--font-large);
+    opacity: 1;
+  }
+
   @media screen and (max-width:1024px) {
     right: 9%;
     top: 5%;
@@ -521,19 +619,8 @@ body {
   and (max-device-width: 1023px)
   and (orientation: landscape) {
     right: 9%;
-    top: 5%;
+    top: 9%;
     left: auto;
-    opacity: 1;
-  }
-
-  &:hover {
-    font-size: var(--font-large);
-    opacity: 1;
-    color: var(--gold)
-  }
-
-  &:focus {
-    font-size: var(--font-large);
     opacity: 1;
   }
 }
