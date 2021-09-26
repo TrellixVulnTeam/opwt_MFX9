@@ -297,6 +297,15 @@ body {
     font-size: 45px;
   }
 }
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .overlay-content a {
+    padding: 2vh 0px 1vh 0px;
+    font-size: 45px;
+    width: 140%;
+    transform: rotate(15deg) translateX(-20vw) translateY(10vh);
+    transform-origin: center center;
+  }
+}
 .overlay-content a:hover {
   font-size: 48px;
   opacity: 1;
@@ -493,26 +502,26 @@ body {
     bottom: 10%;
   }
 }
-@media screen and (max-width: 480px) and (orientation: portrait) {
+@media screen and (max-width: 480px) {
   .main-content {
     width: 100%;
     height: fit-content;
     left: 0%;
     bottom: 10%;
-  }
-}
-@media screen and (max-width: 480px) and (orientation: landscape) {
-  .main-content {
-    width: 100%;
-    height: fit-content;
-    left: 0%;
-    bottom: 0%;
-    display: none;
   }
 }
 @media screen and (max-width: 320px) {
   .main-content {
     bottom: 10%;
+  }
+}
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .main-content {
+    width: 50%;
+    height: 100vh;
+    left: 5%;
+    bottom: 0px;
+    border-width: 0px 3px 0px 3px;
   }
 }
 
@@ -534,6 +543,11 @@ body {
 @media screen and (max-width: 480px) {
   .titolo {
     margin: 10% 5% 10% 5%;
+  }
+}
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .titolo {
+    margin: 9% 4% 9% 4%;
   }
 }
 
@@ -560,6 +574,11 @@ body {
   }
 }
 @media screen and (max-width: 320px) {
+  .op {
+    font-size: 24px;
+  }
+}
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
   .op {
     font-size: 24px;
   }
@@ -591,6 +610,11 @@ body {
     font-size: 84px;
   }
 }
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .wt {
+    font-size: 84px;
+  }
+}
 
 .stacco {
   height: 3px;
@@ -617,6 +641,11 @@ body {
   }
 }
 @media screen and (max-width: 320px) {
+  .stacco {
+    margin: 10px 0px 5px 0px;
+  }
+}
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
   .stacco {
     margin: 10px 0px 5px 0px;
   }
