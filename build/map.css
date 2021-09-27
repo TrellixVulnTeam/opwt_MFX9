@@ -1,0 +1,38 @@
+.navigation {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: scroll;
+  width: 100vw;
+  height: 100vh;
+}
+
+#full_map {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 8000px;
+}
+
+#down_island:hover .st4, #down_island:hover .st0, #down_island:hover .st1 {
+  fill-opacity: 0.6;
+  fill: var(--black);
+}
+#down_island:hover .st3 {
+  fill-opacity: 0.1;
+  fill: var(--black);
+}
+
+#foosha_village:hover .st0, #foosha_village:hover .st2 {
+  fill-opacity: 0.6;
+  fill: var(--black);
+}
+#foosha_village:hover .st1 {
+  stroke: var(--black);
+}
+#foosha_village:hover .st3 {
+  fill-opacity: 0.1;
+  fill: var(--black);
+}
+
+/*# sourceMappingURL=map.css.map */

@@ -45,7 +45,8 @@ body {
     height: 100%;
     width: 100%;
     background: var(--background-color);
-    background-image: url(build/src/home_map.svg);
+    background-image: url(src/scacchiera.svg);
+    background-size: contain;
     position: fixed;
     top: 0;
     left: 0;
@@ -70,13 +71,13 @@ body {
     width: 200px;
     text-align: center;
     font-size: 14px;
-    color: var(--gold);
+    color: var(--black);
     animation: opacity 3s ease-in-out infinite;
 }
 
 @keyframes opacity {
   0% {opacity: 0};
-  50% {opacity: 1};
+  50% {opacity: 0.6};
   100% {opacity: 0};
 }
 
