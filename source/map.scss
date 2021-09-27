@@ -7,13 +7,74 @@
   height: 100vh;
 }
 
+#griglia_superiore,
 #full_map {
   position: absolute;
   left:0px;
   top: 0px;
   height: 8000px;
+  opacity: 0.6;
 }
 
+#full_tx_map {
+  position: absolute;
+  left:0px;
+  top: 0px;
+  height: 8000px;
+  opacity: 1;
+}
+
+.place {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  transition: all 0.8s;
+  opacity: 0.6;
+}
+
+.island {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  transition: all 0.8s;
+  opacity: 0.6;
+}
+
+#down_island {
+  position: absolute;
+  left: calc(15040px - 250px);
+   top: calc(736px - 250px);
+}
+
+#foosha_village {
+  position: absolute;
+  left: calc(15088px - 100px);
+   top: calc(852px - 100px);
+}
+
+.island:hover {
+  transform: scale(0.6);
+  border: 3px solid var(--gold);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.place:hover {
+  transform: scale(0.6);
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  opacity: 1;
+}
+
+#wano {
+  position: absolute;
+  left: calc(6630px - 250px);
+   top: calc(3780px - 250px);
+}
+
+/*
 #down_island:hover {
        .st4, .st0, .st1 {
         fill-opacity: 0.6;
@@ -38,4 +99,4 @@
          fill-opacity: 0.1;
           fill: var(--black);
       }
-}
+}*/
