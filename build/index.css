@@ -428,21 +428,21 @@ body {
   transition: opacity 800ms ease-out;
 }
 
-#img_map {
+#img_menu_1 {
   transform: translateX(-30vw);
   opacity: 0;
   max-width: 55%;
   top: 0px;
 }
 
-#img_sea {
+#img_menu_2 {
   transform: translateX(-15vw);
   opacity: 0;
   max-height: 90%;
   top: 0px;
 }
 
-#img_island {
+#img_menu_3 {
   opacity: 0;
   bottom: 0px;
   max-width: 50%;
@@ -460,11 +460,11 @@ body {
   transition: opacity 800ms var(--ease);
 }
 
-#text_map, #text_sea, #text_island {
+#text_menu_1, #text_menu_2, #text_menu_3 {
   opacity: 0;
 }
 @media screen and (max-width: 1024px) {
-  #text_map, #text_sea, #text_island {
+  #text_menu_1, #text_menu_2, #text_menu_3 {
     display: none;
   }
 }

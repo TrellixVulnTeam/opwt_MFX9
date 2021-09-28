@@ -5,6 +5,7 @@
     <title> Seas - One Piece World Tour</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="seas.css">
+    <link rel="stylesheet" href="pages.css">
     <link rel="icon" href="src/icon_favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -22,11 +23,11 @@
   </div>
 
   <div id="myNav" class="overlay">
-    <img src="src/mappe_map.png" alt="maps" class="img_menu" id="img_map">
-    <img src="src/seas_map.png" alt="seas" class="img_menu" id="img_sea">
+    <img src="src/home_map.png" alt="home" class="img_menu" id="img_home">
+    <img src="src/mappe_map.png" alt="map" class="img_menu" id="img_sea">
     <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_island">
-    <!--<p id="text_home" class="big_text"><nobr>HOME</nobr></p>-->
-    <p id="text_sea" class="big_text">SEAS</p>
+    <p id="text_map" class="big_text">HOME</p>
+    <p id="text_sea" class="big_text"><nobr>OPEN WORLD</nobr></p>
     <p id="text_island" class="big_text">ISLANDS</p>
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
@@ -36,8 +37,8 @@
   </a>
 
     <div class="overlay-content">
-      <a href="openworld.html" id="link_home">Home</a>
-      <a href="seas.html" id="link_sea">Seas</a>
+      <a href="../index.html" id="link_home"><nobr>Home</nobr></a>
+      <a href="openworld.html" id="link_sea">OPEN WORLD</a>
       <a href="islands.html" id="link_island">Islands</a>
     </div>
 
@@ -86,71 +87,66 @@
         $(".caricamento").fadeOut("slow");;
       });
 
-  function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-  }
+      function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+      }
 
-  function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-  }
+      function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+      }
 
-  var delay = (function(){
-      var timer = 0;
-      return function(callback, ms){
-          clearTimeout (timer);
-          timer = setTimeout(callback, ms);
-      };
-  })();
+      var delay = (function(){
+          var timer = 0;
+          return function(callback, ms){
+              clearTimeout (timer);
+              timer = setTimeout(callback, ms);
+          };
+      })();
 
-  $(function() {
-      var pause = 100;
+      $(function() {
+          var pause = 100;
 
-      $(window).resize(function() {
-          delay(function() {
-            var width = $(window).width();
-            if( width > 1024 ) {
-              $('#img_map').css("display", "block");
-              $('#img_sea').css("display", "block");
-              $('#img_island').css("display", "block");
-              $("#link_home").hover(function(){
-                //$('#img_map').css("opacity", "1");
-                //('#text_map').css("opacity", "0.3");
-                //$('.overlay').css('background-image', 'url(src/back_menu.svg)');
-                //$('.overlay').css('background-position', 'bottom right');
-                }, function(){
-                  //$('.overlay').css('background-image', 'url(src/scacchiera.svg)');
-                  //$('.overlay').css('background-position', 'center center');
+          $(window).resize(function() {
+              delay(function() {
+                var width = $(window).width();
+                if( width > 1024 ) {
+                  $('#img_home').css("display", "block");
+                  $('#img_sea').css("display", "block");
+                  $('#img_island').css("display", "block");
+                  $("#link_home").hover(function(){
+                    $('#img_home').css("opacity", "1");
+                    $('#text_map').css("opacity", "0.3");
+                    }, function(){
+                    $('#img_home').css("opacity", "0");
+                    $('#text_map').css("opacity", "0");
+                  });
 
-                //$('#img_map').css("opacity", "0");
-                //$('#text_map').css("opacity", "0");
-              });
+                  $("#link_sea").hover(function(){
+                    $('#text_sea').css("opacity", "0.3");
+                    $('#img_sea').css("opacity", "1");
+                    }, function(){
+                    $('#text_sea').css("opacity", "0");
+                    $('#img_sea').css("opacity", "0");
+                  });
 
-              $("#link_sea").hover(function(){
-                $('#text_sea').css("opacity", "0.3");
-                $('#img_sea').css("opacity", "1");
-                }, function(){
-                $('#text_sea').css("opacity", "0");
-                $('#img_sea').css("opacity", "0");
-              });
+                  $("#link_island").hover(function(){
+                    $('#img_island').css("opacity", "1");
+                    $('#text_island').css("opacity", "0.3");
+                    }, function(){
+                    $('#img_island').css("opacity", "0");
+                    $('#text_island').css("opacity", "0");
+                  });
 
-              $("#link_island").hover(function(){
-                $('#img_island').css("opacity", "1");
-                $('#text_island').css("opacity", "0.3");
-                }, function(){
-                $('#img_island').css("opacity", "0");
-                $('#text_island').css("opacity", "0");
-              });
+                } else {
+                   $('#img_home').css("display", "none");
+                   $('#img_sea').css("display", "none");
+                   $('#img_island').css("display", "none");
+                }
+              }, pause );
+          });
 
-            } else {
-               $('#img_map').css("display", "none");
-               $('#img_sea').css("display", "none");
-               $('#img_island').css("display", "none");
-            }
-          }, pause );
+          $(window).resize();
       });
-
-      $(window).resize();
-  });
 
   </script>
 

@@ -1,3 +1,14 @@
+.overlay-content a {
+
+  @media screen and (max-width:1024px) {
+
+    &:nth-child(1) {
+      background-image: url(src/home_tel.png);
+
+    }
+  }
+}
+
 .navigation {
   position: absolute;
   top: 0px;

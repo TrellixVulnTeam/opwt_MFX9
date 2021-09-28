@@ -5,7 +5,7 @@
   <title>One Piece World Tour</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="map.css">
-  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="map.css">
   <link rel="icon" href="src/icon_favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -44,12 +44,12 @@
   </div>
 
 <div id="myNav" class="overlay">
-  <img src="src/home_map.png" alt="home" class="img_menu" id="img_home">
-  <img src="src/seas_map.png" alt="seas" class="img_menu" id="img_sea">
-  <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_island">
-  <p id="text_map" class="big_text">HOME</p>
-  <p id="text_sea" class="big_text">SEAS</p>
-  <p id="text_island" class="big_text">ISLANDS</p>
+  <img src="src/home_map.png" alt="home" class="img_menu" id="img_menu_1">
+  <img src="src/seas_map.png" alt="seas" class="img_menu" id="img_menu_2">
+  <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_menu_3">
+  <p id="text_menu_1" class="big_text">HOME</p>
+  <p id="text_menu_2" class="big_text">SEAS</p>
+  <p id="text_menu_3" class="big_text">ISLANDS</p>
 
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
     <svg class="close-icon" id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><style>.cls-1{fill:#e6e6e6;}</style></defs>
@@ -58,9 +58,9 @@
 </a>
 
   <div class="overlay-content">
-    <a href="../index.html" id="link_home"><nobr>Home</nobr></a>
-    <a href="seas.html" id="link_sea">Seas</a>
-    <a href="islands.html" id="link_island">Islands</a>
+    <a href="../index.html" id="link_menu_1"><nobr>Home</nobr></a>
+    <a href="seas.html" id="link_menu_2">Seas</a>
+    <a href="islands.html" id="link_menu_3">Islands</a>
   </div>
 
 </div>
@@ -114,37 +114,37 @@ $(function() {
         delay(function() {
           var width = $(window).width();
           if( width > 1024 ) {
-            $('#img_home').css("display", "block");
-            $('#img_sea').css("display", "block");
-            $('#img_island').css("display", "block");
-            $("#link_home").hover(function(){
-              $('#img_home').css("opacity", "1");
-              $('#text_map').css("opacity", "0.3");
+            $('#img_menu_1').css("display", "block");
+            $('#img_menu_2').css("display", "block");
+            $('#img_menu_3').css("display", "block");
+            $("#link_menu_1").hover(function(){
+              $('#img_menu_1').css("opacity", "1");
+              $('#text_menu_1').css("opacity", "0.3");
               }, function(){
-              $('#img_home').css("opacity", "0");
-              $('#text_map').css("opacity", "0");
+              $('#img_menu_1').css("opacity", "0");
+              $('#text_menu_1').css("opacity", "0");
             });
 
-            $("#link_sea").hover(function(){
-              $('#text_sea').css("opacity", "0.3");
-              $('#img_sea').css("opacity", "1");
+            $("#link_menu_2").hover(function(){
+              $('#text_menu_2').css("opacity", "0.3");
+              $('#img_menu_2').css("opacity", "1");
               }, function(){
-              $('#text_sea').css("opacity", "0");
-              $('#img_sea').css("opacity", "0");
+              $('#text_menu_2').css("opacity", "0");
+              $('#img_menu_2').css("opacity", "0");
             });
 
-            $("#link_island").hover(function(){
-              $('#img_island').css("opacity", "1");
-              $('#text_island').css("opacity", "0.3");
+            $("#link_menu_3").hover(function(){
+              $('#img_menu_3').css("opacity", "1");
+              $('#text_menu_3').css("opacity", "0.3");
               }, function(){
-              $('#img_island').css("opacity", "0");
-              $('#text_island').css("opacity", "0");
+              $('#img_menu_3').css("opacity", "0");
+              $('#text_menu_3').css("opacity", "0");
             });
 
           } else {
-             $('#img_home').css("display", "none");
-             $('#img_sea').css("display", "none");
-             $('#img_island').css("display", "none");
+             $('#img_menu_1').css("display", "none");
+             $('#img_menu_2').css("display", "none");
+             $('#img_menu_3').css("display", "none");
           }
         }, pause );
     });
@@ -154,7 +154,7 @@ $(function() {
 
 $(".island, .place").on("click", function() {
   var id = $(this).attr("id");
-  window.location.href = "places/" + id + ".html"
+  window.location.href = "islands/" + id + ".html"
 })
 
 </script>
