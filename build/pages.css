@@ -1,0 +1,23 @@
+@media screen and (max-width: 1024px) {
+  .overlay-content a:nth-child(1) {
+    background-image: url(src/home_tel.png);
+  }
+}
+
+#img_home {
+  transform: translateX(-30vw);
+  opacity: 0;
+  max-width: 55%;
+  top: 0px;
+}
+
+#text_home {
+  opacity: 0;
+}
+@media screen and (max-width: 1024px) {
+  #text_home {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=pages.css.map */

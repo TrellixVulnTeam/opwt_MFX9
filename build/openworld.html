@@ -5,6 +5,7 @@
   <title>One Piece World Tour</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="map.css">
+  <link rel="stylesheet" href="pages.css">
   <link rel="icon" href="src/icon_favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -43,10 +44,10 @@
   </div>
 
 <div id="myNav" class="overlay">
-  <img src="src/mappe_map.png" alt="maps" class="img_menu" id="img_map">
+  <img src="src/home_map.png" alt="home" class="img_menu" id="img_home">
   <img src="src/seas_map.png" alt="seas" class="img_menu" id="img_sea">
   <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_island">
-  <p id="text_map" class="big_text"><nobr>OPEN WORLD</nobr></p>
+  <p id="text_map" class="big_text">HOME</p>
   <p id="text_sea" class="big_text">SEAS</p>
   <p id="text_island" class="big_text">ISLANDS</p>
 
@@ -113,14 +114,14 @@ $(function() {
         delay(function() {
           var width = $(window).width();
           if( width > 1024 ) {
-            $('#img_map').css("display", "block");
+            $('#img_home').css("display", "block");
             $('#img_sea').css("display", "block");
             $('#img_island').css("display", "block");
-            $("#link_map").hover(function(){
-              $('#img_map').css("opacity", "1");
+            $("#link_home").hover(function(){
+              $('#img_home').css("opacity", "1");
               $('#text_map').css("opacity", "0.3");
               }, function(){
-              $('#img_map').css("opacity", "0");
+              $('#img_home').css("opacity", "0");
               $('#text_map').css("opacity", "0");
             });
 
@@ -141,7 +142,7 @@ $(function() {
             });
 
           } else {
-             $('#img_map').css("display", "none");
+             $('#img_home').css("display", "none");
              $('#img_sea').css("display", "none");
              $('#img_island').css("display", "none");
           }
