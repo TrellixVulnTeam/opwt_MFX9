@@ -46,7 +46,6 @@
   color: var(--black);
   font-family: var(--font-grande);
   font-size: 20px;
-  padding: 24px;
 }
 @media screen and (max-width: 480px) {
   .seas_list a {
@@ -68,16 +67,16 @@
   width: 100vw;
   height: 100vh;
   opacity: 0.6;
-}
-.filter .title {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  color: var(--gold);
-  font-size: 60px;
-  font-family: var(--font-grande);
-  opacity: 0.3;
-  line-height: 0;
+  /*.title {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: var(--gold);
+    font-size: 60px;;
+    font-family: var(--font-grande);
+    opacity: 0.3;
+    line-height: 0;
+  }*/
 }
 
 #back_s,
