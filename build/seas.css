@@ -1,3 +1,9 @@
+@media screen and (max-width: 1024px) {
+  .overlay-content a:nth-child(1) {
+    background-image: url(src/home_tel.png);
+  }
+}
+
 .seas_list {
   position: absolute;
   left: 9%;
@@ -5,5 +11,145 @@
   width: 82%;
   text-align: center;
 }
+
+.animated_background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#back_s,
+#wind_s,
+#over_s {
+  position: absolute;
+  left: 0px;
+  top: -700px;
+  height: 2000px;
+}
+@media screen and (max-width: 1024px) {
+  #back_s,
+#wind_s,
+#over_s {
+    height: 1000px;
+    top: -200px;
+    left: -350px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #back_s,
+#wind_s,
+#over_s {
+    height: 1000px;
+    top: -200px;
+    left: -350px;
+  }
+}
+#wind_s {
+  transform-origin: 1333px 1333px;
+  animation: rotation 15s linear infinite;
+}
+@media screen and (max-width: 1024px) {
+  #wind_s {
+    transform-origin: 666px 666px;
+  }
+}
+
+#over_s {
+  transform-origin: 60% 40%;
+  animation: overmov 15s linear infinite;
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -moz-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*
+@-moz-keyframes overmov {
+  0% {
+      -moz-transform: rotate(0deg);
+      -moz-transform:rotate(0deg);
+  }
+  100% {
+      -moz-transform: rotate(360deg);
+      -moz-transform:rotate(360deg);
+  }
+}
+@-webkit-keyframes overmov {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}*/
+@keyframes overmov {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(160deg);
+    transform: rotate(160deg);
+  }
+  75% {
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*
+@media screen and (max-width:1024px) {
+
+}
+
+@media screen and (max-width:768px) {
+
+}
+
+@media screen and (max-width:480px) {
+
+}
+
+@media screen and (max-width:320px) {
+
+}
+
+@media screen
+and (max-device-width: 1023px)
+and (orientation: landscape) {
+
+}
+
+*/
 
 /*# sourceMappingURL=seas.css.map */

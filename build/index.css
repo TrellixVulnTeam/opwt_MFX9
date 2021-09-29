@@ -301,7 +301,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   top: 0;
   background-color: var(--black);
@@ -478,6 +478,7 @@ body {
   fill: var(--black);
   animation-play-state: paused;
   cursor: pointer;
+  z-index: 99;
 }
 @media screen and (max-width: 1024px) {
   .hamburger {
