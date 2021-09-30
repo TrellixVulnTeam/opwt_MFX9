@@ -363,19 +363,6 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-
-  @media screen and (max-width:768px) {
-
-  }
-
-  @media screen and (max-width:480px) {
-
-  }
-
-  @media screen
-  and (max-device-width: 1023px)
-  and (orientation: landscape) {
-  }
 }
 
 .overlay-content a {
@@ -553,7 +540,16 @@ body {
   }
 
   @media screen
-  and (max-device-width: 1023px)
+  and (max-device-width: 1365px)
+  and (orientation: landscape) {
+    right: 9%;
+    top: 9%;
+    left: auto;
+  }
+}
+
+  @media screen
+  and (max-device-width: 1024px)
   and (orientation: landscape) {
     right: 9%;
     top: 9%;
