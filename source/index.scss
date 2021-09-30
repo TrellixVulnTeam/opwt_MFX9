@@ -192,7 +192,7 @@ body {
  }
 
  65% {
-   -moz-transform: translate(-1600px, -1100px);
+   -moz-transform: translate(-1400px, -1100px);
    opacity: 0;
  }
 
@@ -245,7 +245,7 @@ body {
  }
 
  65% {
-   -webkit-transform: translate(-1600px, -1100px);
+   -webkit-transform: translate(-1400px, -1100px);
    opacity: 0;
  }
 
@@ -302,8 +302,8 @@ body {
  }
 
  65% {
-   -webkit-transform: translate(-1600px, -1100px);
-   transform: translate(-1600px, -1100px);
+   -webkit-transform: translate(-1400px, -1100px);
+   transform: translate(-1400px, -1100px);
    opacity: 0;
  }
 
@@ -333,11 +333,11 @@ body {
 
 .overlay {
   height: 100%;
-  width: 0;
+  width: 0%;
   position: fixed;
   z-index: 100;
-  left: 0;
-  top: 0;
+  left: 0px;
+  top: 0px;
   background-color: var(--black);
   background-image: url(src/scacchiera.svg);
   background-size: cover;
@@ -353,15 +353,15 @@ body {
   width: 50%;
   text-align: left;
 
-  @media screen and (max-width:1024px) {
-    left: 0px;
-    width: 100%;
-    text-align: center;
-    height: fit-content;
-    margin: 0;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  @media screen
+  and (max-device-width: 1400px)
+  and (min-device-width:1024px)
+  and (orientation: landscape) {
+
+  }
+
+  @media screen and (max-device-width:1024px) {
+
   }
 }
 
@@ -387,81 +387,44 @@ body {
 
 
   @media screen and (max-width:1024px) {
-    width: 100%;
-    height: auto;
-    text-align: center;
+
+    font-size: 48px;
     opacity: 1;
-    font-size: 60px;
-    color: var(--black);
-    font-family: var(--font-grande);
-    padding: 4vh 0px 3vh 0px;
 
     &:hover {
-      font-size: 60px;
+      font-size: 48px;
       opacity: 1;
-      color: var(--black);
-    }
-
-    &:nth-child(1) {
-      background-image: url(src/mappe_tel.png);
-      background-size: cover;
-      background-position: center center;
-      margin-bottom: 2%;
-    }
-
-    &:nth-child(2) {
-      background-image: url(src/sea_tel.png);
-      background-size: cover;
-      background-position: center center;
-      margin-bottom: 2%;
-    }
-
-    &:nth-child(3) {
-      background-image: url(src/raftel_tel.png);
-      background-size: cover;
-      background-position: center center;
+      color: var(--gold);
     }
   }
 
   @media screen and (max-width:768px) {
-    padding: 4vh 0px 3vh 0px;
+    font-size: 40px;
 
-    &:nth-child(1) {
-      margin-bottom: 3%;
-    }
-
-    &:nth-child(2) {
-      margin-bottom: 3%;
+    &:hover {
+      font-size: 40px;
     }
   }
 
   @media screen and (max-width:480px) {
-    padding: 4vh 0px 3vh 0px;
-    font-size: 45px;
+    font-size: 36px;
+
+    &:hover {
+      font-size: 36px;
+    }
   }
 
-  @media screen and (max-width:320px) {
-    padding: 2vh 0px 1vh 0px;
-    font-size: 45px;
+  @media screen
+  and (max-device-width: 1400px)
+  and (min-device-width: 1024px)
+  and (orientation: landscape) {
+    opacity: 1;
   }
 
   @media screen
   and (max-device-width: 1023px)
   and (orientation: landscape) {
-    padding: 4vh 0px 3vh 0px;
-    font-size: 45px;
-    width: 140%;
-    transform: rotate(20deg) translateX(-20vw) translateY(15vh);
-    transform-origin: center center;
-
-    &:nth-child(1) {
-      margin-bottom: 4vh;
     }
-
-    &:nth-child(2) {
-      margin-bottom: 4vh;
-    }
-  }
 }
 
 .overlay img{
@@ -508,6 +471,12 @@ body {
   @media screen and (max-width:1024px) {
     display: none;
   }
+
+  @media screen
+  and (max-device-width: 1400px)
+  and (orientation: landscape) {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -521,39 +490,29 @@ body {
     cursor: pointer;
     z-index: 99;
 
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width:1024px) and (orientation: portrait) {
       right: 9%;
       top: 5%;
       left: auto;
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:768px) and (orientation: portrait)  {
       right: 5%;
       top: 5%;
       left: auto;
     }
 
-  @media screen and (max-width:480px) {
+  @media screen and (max-width:480px)  and (orientation: portrait) {
     right: 5%;
     top: 5%;
     left: auto;
   }
 
   @media screen
-  and (max-device-width: 1365px)
+  and (max-device-width: 1400px)
   and (orientation: landscape) {
-    right: 9%;
-    top: 9%;
-    left: auto;
-  }
-}
-
-  @media screen
-  and (max-device-width: 1024px)
-  and (orientation: landscape) {
-    right: 9%;
-    top: 9%;
-    left: auto;
+    left: 9%;
+    bottom: 10%;
   }
 }
 
@@ -674,11 +633,11 @@ body {
   }
 
   @media screen
-  and (max-device-width: 1023px)
+  and (max-width: 1400px)
   and (orientation: landscape) {
-    width: 50%;
+    width: 40%;
     height: 100vh;
-    left: 5%;
+    left: 55%;
     bottom: 0px;
     border-width: 0px 3px 0px 3px;
   }
@@ -702,7 +661,7 @@ body {
   }
 
   @media screen
-  and (max-device-width: 1023px)
+  and (max-device-width: 1400px)
   and (orientation: landscape) {
     margin: 9% 4% 9% 4%;
   }

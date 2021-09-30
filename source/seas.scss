@@ -168,9 +168,8 @@ height: 1000px;
   }
 
   @media screen
-  and (max-device-width: 1023px)
+  and (max-device-width: 1366px)
   and (orientation: landscape) {
-
   }
 
 }
@@ -223,10 +222,10 @@ height: 1000px;
   }
 
   @media screen
-  and (max-device-width: 1023px)
-  and (orientation: landscape) {
-
+  and (max-device-width: 1600px)
+  and (orientation: landscape){
   }
+
 }
 
 #wind_s {
