@@ -21,7 +21,9 @@
       </div>
   </div>
 
-<div class="animated_background">
+    <div class="ambito" id="ambito"></div>
+
+<div class="animated_background" id="animated_background">
 
   <img src="src/back_sea.svg" alt="background" class="back_s" id="back_s">
   <img src="src/back_sea_m.svg" alt="background" class="back_s" id="back_s_m">
@@ -36,13 +38,17 @@
 <div class="filter">
 </div>
 
+<div class="title">
+  <p>SEAS</p>
+</div>
+
   <div id="myNav" class="overlay">
-    <img src="src/home_map.png" alt="home" class="img_menu" id="img_menu_1">
-    <img src="src/mappe_map.png" alt="map" class="img_menu" id="img_menu_2">
-    <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_menu_3">
-    <p id="text_menu_1" class="big_text">HOME</p>
-    <p id="text_menu_2" class="big_text"><nobr>OPEN WORLD</nobr></p>
-    <p id="text_menu_3" class="big_text">ISLANDS</p>
+    <img src="src/home_map.png" alt="home" class="img_menu" id="img_home">
+    <img src="src/mappe_map.png" alt="map" class="img_menu" id="img_open">
+    <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_island">
+    <p id="text_home" class="big_text">HOME</p>
+    <p id="text_open" class="big_text"><nobr>OPEN WORLD</nobr></p>
+    <p id="text_island" class="big_text">ISLANDS</p>
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
       <svg class="close-icon" id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><style>.cls-1{fill:#e6e6e6;}</style></defs>
@@ -68,15 +74,15 @@
 
     <main class="seas_list">
       <ul>
-        <li><a href="../build/seas/east_blue.html">East Blue </a></li>
-        <li><a href="#">North Blue </a></li>
-        <li><a href="#">West Blue </a></li>
-        <li><a href="#">South Blue </a></li>
-        <li><a href="#">Calm Belt </a></li>
-        <li><a href="#">All Blue </a></li>
-        <li><a href="#">Paradise </a></li>
-        <li><a href="#">New World </a></li>
-        <li><a href="#">Sky Ocean </a></li>
+        <li><a href="../build/seas/east_blue.html" id="east">East Blue</a></li>
+        <li><a href="../build/seas/north_blue.html" id="north">North Blue</a></li>
+        <li><a href="../build/seas/west_blue.html" id="west">West Blue</a></li>
+        <li><a href="../build/seas/south_blue.html" id="south">South Blue</a></li>
+        <li><a href="../build/seas/calm_belt.html" id="calm">Calm Belt</a></li>
+        <li><a href="../build/seas/all_blue.html" id="allb">All Blue</a></li>
+        <li><a href="../build/seas/paradise.html" id="paradise">Paradise</a></li>
+        <li><a href="../build/seas/new_world.html" id="neww">New World</a></li>
+        <li><a href="../build/seas/sky_ocean.html" id="sky">Sky Ocean</a></li>
       </ul>
 
 
@@ -107,7 +113,7 @@
 
       function closeNav() {
       document.getElementById("myNav").style.width = "0%";
-      }
+      }img_open
 
       var delay = (function(){
           var timer = 0;
@@ -122,55 +128,285 @@
 
           $(window).resize(function() {
               delay(function() {
+                $('#img_home').css("display", "block");
+                $('#img_open').css("display", "block");
+                $('#img_island').css("display", "block");
                 var width = $(window).width();
-                if( width > 1024 ) {
-                  $('#img_menu_1').css("display", "block");
-                  $('#img_menu_2').css("display", "block");
-                  $('#img_menu_3').css("display", "block");
+                var widthfull = window.screen.width;
+                var heightfull = window.screen.height;
+                if( width >= 1400) {
                   $("#link_menu_1").hover(function(){
-                    $('#img_menu_1').css("opacity", "1");
-                    $('#text_menu_1').css("opacity", "0.3");
+                    $('#img_home').css("opacity", "1");
+                    $('#text_home').css("opacity", "0.3");
                     }, function(){
-                    $('#img_menu_1').css("opacity", "0");
-                    $('#text_menu_1').css("opacity", "0");
+                    $('#img_home').css("opacity", "0");
+                    $('#text_home').css("opacity", "0");
                   });
 
                   $("#link_menu_2").hover(function(){
-                    $('#text_menu_2').css("opacity", "0.3");
-                    $('#img_menu_2').css("opacity", "1");
+                    $('#text_open').css("opacity", "0.3");
+                    $('#img_open').css("opacity", "1");
                     }, function(){
-                    $('#text_menu_2').css("opacity", "0");
-                    $('#img_menu_2').css("opacity", "0");
+                    $('#text_open').css("opacity", "0");
+                    $('#img_open').css("opacity", "0");
                   });
 
                   $("#link_menu_3").hover(function(){
-                    $('#img_menu_3').css("opacity", "1");
-                    $('#text_menu_3').css("opacity", "0.3");
+                    $('#img_island').css("opacity", "1");
+                    $('#text_island').css("opacity", "0.3");
                     }, function(){
-                    $('#img_menu_3').css("opacity", "0");
-                    $('#text_menu_3').css("opacity", "0");
+                    $('#img_island').css("opacity", "0");
+                    $('#text_island').css("opacity", "0");
                   });
 
                   //codice per il movimento dietro//
-                  $('.seas_list li:nth-child(1)').hover(function(){
-                    console.log('hai toccato East Blue')
-                    $("#m_map").css('animation', 'pulse 3s')
+                  $(document).on('mouseover', '#east', function() {
+                    $("#animated_background").addClass("east");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/east.png)");
                   });
-                  $('.seas_list li:nth-child(2)').hover(function(){
-                    console.log('hai toccato North Blue')
-                    $("#m_map").css('animation', 'nav-bg 3s')
+                  $(document).on('mouseout', '#east', function() {
+                    $("#animated_background").removeClass("east");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#north', function() {
+                    $("#animated_background").addClass("north");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/north.png)");
+                  });
+                  $(document).on('mouseout', '#north', function() {
+                    $("#animated_background").removeClass("north");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#west', function() {
+                    $("#animated_background").addClass("west");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/west.png)");
+                  });
+                  $(document).on('mouseout', '#west', function() {
+                    $("#animated_background").removeClass("west");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#south', function() {
+                    $("#animated_background").addClass("south");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/south.png)");
+                  });
+                  $(document).on('mouseout', '#south', function() {
+                    $("#animated_background").removeClass("south");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#calm', function() {
+                    $("#animated_background").addClass("calm");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/calm.png)");
+                  });
+                  $(document).on('mouseout', '#calm', function() {
+                    $("#animated_background").removeClass("calm");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#allb', function() {
+                    $("#animated_background").addClass("allb");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/allb.png)");
+                  });
+                  $(document).on('mouseout', '#allb', function() {
+                    $("#animated_background").removeClass("allb");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#paradise', function() {
+                    $("#animated_background").addClass("paradise");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/paradise.png)");
+                  });
+                  $(document).on('mouseout', '#paradise', function() {
+                    $("#animated_background").removeClass("paradise");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#neww', function() {
+                    $("#animated_background").addClass("neww");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/neww.png)");
+                  });
+                  $(document).on('mouseout', '#neww', function() {
+                    $("#animated_background").removeClass("neww");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#sky', function() {
+                    $("#animated_background").addClass("sky");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/sky.png)");
+                  });
+                  $(document).on('mouseout', '#sky', function() {
+                    $("#animated_background").removeClass("sky");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  //fine//
+
+                } else if ( width < 1400 && width >= 1024 && width < widthfull ) {
+                  $("#link_menu_1").hover(function(){
+                    $('#img_home').css("opacity", "1");
+                    $('#text_home').css("opacity", "0.3");
+                    }, function(){
+                    $('#img_home').css("opacity", "0");
+                    $('#text_home').css("opacity", "0");
+                  });
+
+                  $("#link_menu_2").hover(function(){
+                    $('#text_open').css("opacity", "0.3");
+                    $('#img_open').css("opacity", "1");
+                    }, function(){
+                    $('#text_open').css("opacity", "0");
+                    $('#img_open').css("opacity", "0");
+                  });
+
+                  $("#link_menu_3").hover(function(){
+                    $('#img_island').css("opacity", "1");
+                    $('#text_island').css("opacity", "0.3");
+                    }, function(){
+                    $('#img_island').css("opacity", "0");
+                    $('#text_island').css("opacity", "0");
+                  });
+
+                  //codice per il movimento dietro//
+                  $(document).on('mouseover', '#east', function() {
+                    $("#animated_background").addClass("east");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/east.png)");
+                  });
+                  $(document).on('mouseout', '#east', function() {
+                    $("#animated_background").removeClass("east");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#north', function() {
+                    $("#animated_background").addClass("north");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/north.png)");
+                  });
+                  $(document).on('mouseout', '#north', function() {
+                    $("#animated_background").removeClass("north");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#west', function() {
+                    $("#animated_background").addClass("west");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/west.png)");
+                  });
+                  $(document).on('mouseout', '#west', function() {
+                    $("#animated_background").removeClass("west");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#south', function() {
+                    $("#animated_background").addClass("south");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/south.png)");
+                  });
+                  $(document).on('mouseout', '#south', function() {
+                    $("#animated_background").removeClass("south");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#calm', function() {
+                    $("#animated_background").addClass("calm");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/calm.png)");
+                  });
+                  $(document).on('mouseout', '#calm', function() {
+                    $("#animated_background").removeClass("calm");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#allb', function() {
+                    $("#animated_background").addClass("allb");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/allb.png)");
+                  });
+                  $(document).on('mouseout', '#allb', function() {
+                    $("#animated_background").removeClass("allb");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#paradise', function() {
+                    $("#animated_background").addClass("paradise");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/paradise.png)");
+                  });
+                  $(document).on('mouseout', '#paradise', function() {
+                    $("#animated_background").removeClass("paradise");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#neww', function() {
+                    $("#animated_background").addClass("neww");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/neww.png)");
+                  });
+                  $(document).on('mouseout', '#neww', function() {
+                    $("#animated_background").removeClass("neww");
+                    $("#ambito").fadeOut(800);
+                  });
+
+                  $(document).on('mouseover', '#sky', function() {
+                    $("#animated_background").addClass("sky");
+                    $("#ambito").fadeIn(800);
+                    $("#ambito").css("background-image", "url(src/sky.png)");
+                  });
+                  $(document).on('mouseout', '#sky', function() {
+                    $("#animated_background").removeClass("sky");
+                    $("#ambito").fadeOut(800);
                   });
                   //fine//
 
                 } else {
-                   $('#img_menu_1').css("display", "none");
-                   $('#img_menu_2').css("display", "none");
-                   $('#img_menu_3').css("display", "none");
+                   $('#img_home').css("display", "none");
+                   $('#img_open').css("display", "none");
+                   $('#img_island').css("display", "none");
+                   $("#ambito").fadeOut(800);
+                   $(document).on('mouseover', '#east', function() {
+                     $("#animated_background").removeClass("east");
+                   });
+                   $(document).on('mouseover', '#north', function() {
+                     $("#animated_background").removeClass("north");
+                   });
+                   $(document).on('mouseover', '#west', function() {
+                     $("#animated_background").removeClass("west");
+                   });
+                   $(document).on('mouseover', '#south', function() {
+                     $("#animated_background").removeClass("south");
+                   });
+                   $(document).on('mouseover', '#calm', function() {
+                     $("#animated_background").removeClass("calm");
+                   });
+                   $(document).on('mouseover', '#allb', function() {
+                     $("#animated_background").removeClass("allb");
+                   });
+                   $(document).on('mouseover', '#paradise', function() {
+                     $("#animated_background").removeClass("paradise");
+                   });
+                   $(document).on('mouseover', '#neww', function() {
+                     $("#animated_background").removeClass("neww");
+                   });
+                   $(document).on('mouseover', '#sky', function() {
+                     $("#animated_background").removeClass("sky");
+                   });
                 }
               }, pause );
           });
 
           $(window).resize();
+
       });
 
   </script>

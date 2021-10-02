@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>One Piece World Tour</title>
+  <title>Open World - One Piece World Tour</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="map.css">
   <link rel="stylesheet" href="map.css">
@@ -44,12 +44,12 @@
   </div>
 
 <div id="myNav" class="overlay">
-  <img src="src/home_map.png" alt="home" class="img_menu" id="img_menu_1">
-  <img src="src/seas_map.png" alt="seas" class="img_menu" id="img_menu_2">
-  <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_menu_3">
-  <p id="text_menu_1" class="big_text">HOME</p>
-  <p id="text_menu_2" class="big_text">SEAS</p>
-  <p id="text_menu_3" class="big_text">ISLANDS</p>
+  <img src="src/home_map.png" alt="home" class="img_menu" id="img_home">
+  <img src="src/seas_map.png" alt="seas" class="img_menu" id="img_sea">
+  <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_island">
+  <p id="text_home" class="big_text">HOME</p>
+  <p id="text_sea" class="big_text">SEAS</p>
+  <p id="text_island" class="big_text">ISLANDS</p>
 
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
     <svg class="close-icon" id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><style>.cls-1{fill:#e6e6e6;}</style></defs>
@@ -83,11 +83,17 @@
   crossorigin="anonymous"></script>
 
   <script type="text/javascript">
+  var positionleft = 15050;
+  var positiontop = 736;
+  var height2 = (window.innerHeight/2);
+  var width2 = (window.innerWidth/2);
+  var positionx = positionleft - width2;
+  var positiony = positiontop - height2;
     $(window).on('load', function() {
       $(".caricamento").fadeOut("slow");
       $('.navigation').animate({
-        scrollTop: 436,
-        scrollLeft: 14384
+        scrollTop: positiony,
+        scrollLeft: positionx
       }, 10);
     });
 
@@ -112,63 +118,63 @@ $(function() {
 
     $(window).resize(function() {
         delay(function() {
-          $('#img_menu_1').css("display", "block");
-          $('#img_menu_2').css("display", "block");
-          $('#img_menu_3').css("display", "block");
+          $('#img_home').css("display", "block");
+          $('#img_sea').css("display", "block");
+          $('#img_island').css("display", "block");
           var width = $(window).width();
           if( width >= 1400) {
             $("#link_menu_1").hover(function(){
-              $('#img_menu_1').css("opacity", "1");
-              $('#text_menu_1').css("opacity", "0.3");
+              $('#img_home').css("opacity", "1");
+              $('#text_home').css("opacity", "0.3");
               }, function(){
-              $('#img_menu_1').css("opacity", "0");
-              $('#text_menu_1').css("opacity", "0");
+              $('#img_home').css("opacity", "0");
+              $('#text_home').css("opacity", "0");
             });
 
             $("#link_menu_2").hover(function(){
-              $('#text_menu_2').css("opacity", "0.3");
-              $('#img_menu_2').css("opacity", "1");
+              $('#text_sea').css("opacity", "0.3");
+              $('#img_sea').css("opacity", "1");
               }, function(){
-              $('#text_menu_2').css("opacity", "0");
-              $('#img_menu_2').css("opacity", "0");
+              $('#text_sea').css("opacity", "0");
+              $('#img_sea').css("opacity", "0");
             });
 
             $("#link_menu_3").hover(function(){
-              $('#img_menu_3').css("opacity", "1");
-              $('#text_menu_3').css("opacity", "0.3");
+              $('#img_island').css("opacity", "1");
+              $('#text_island').css("opacity", "0.3");
               }, function(){
-              $('#img_menu_3').css("opacity", "0");
-              $('#text_menu_3').css("opacity", "0");
+              $('#img_island').css("opacity", "0");
+              $('#text_island').css("opacity", "0");
             });
 
           } else if ( width >= 1024 && window.innerHeight > window.innerWidth) {
             $("#link_menu_1").hover(function(){
-              $('#img_menu_1').css("opacity", "1");
-              $('#text_menu_1').css("opacity", "0.3");
+              $('#img_home').css("opacity", "1");
+              $('#text_home').css("opacity", "0.3");
               }, function(){
-              $('#img_menu_1').css("opacity", "0");
-              $('#text_menu_1').css("opacity", "0");
+              $('#img_home').css("opacity", "0");
+              $('#text_home').css("opacity", "0");
             });
 
             $("#link_menu_2").hover(function(){
-              $('#text_menu_2').css("opacity", "0.3");
-              $('#img_menu_2').css("opacity", "1");
+              $('#text_sea').css("opacity", "0.3");
+              $('#img_sea').css("opacity", "1");
               }, function(){
-              $('#text_menu_2').css("opacity", "0");
-              $('#img_menu_2').css("opacity", "0");
+              $('#text_sea').css("opacity", "0");
+              $('#img_sea').css("opacity", "0");
             });
 
             $("#link_menu_3").hover(function(){
-              $('#img_menu_3').css("opacity", "1");
-              $('#text_menu_3').css("opacity", "0.3");
+              $('#img_island').css("opacity", "1");
+              $('#text_island').css("opacity", "0.3");
               }, function(){
-              $('#img_menu_3').css("opacity", "0");
-              $('#text_menu_3').css("opacity", "0");
+              $('#img_island').css("opacity", "0");
+              $('#text_island').css("opacity", "0");
             });
           } else if (width < 1024) {
-             $('#img_menu_1').css("display", "none");
-             $('#img_menu_2').css("display", "none");
-             $('#img_menu_3').css("display", "none");
+             $('#img_home').css("display", "none");
+             $('#img_sea').css("display", "none");
+             $('#img_island').css("display", "none");
           }
         }, pause );
     });

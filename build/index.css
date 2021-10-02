@@ -297,6 +297,43 @@ body {
     opacity: 0;
   }
 }
+.title {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  bottom: calc(10% + 150px);
+  left: calc(9% - 10px);
+  line-height: 0;
+  color: var(--gold);
+  font-size: 60px;
+  font-family: var(--font-grande);
+  transform: rotate(-90deg);
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .title {
+    top: calc(10% + 90px);
+    right: calc(9% - 17px);
+    left: auto;
+    bottom: auto;
+  }
+}
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .title {
+    top: calc(15% + 60px);
+    right: calc(5% - 17px);
+    left: auto;
+    bottom: auto;
+  }
+}
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  .title {
+    top: 27%;
+    right: calc(5% - 17px);
+    left: auto;
+    bottom: auto;
+  }
+}
+
 .overlay {
   height: 100%;
   width: 0%;
@@ -375,24 +412,30 @@ body {
   transition: opacity 800ms ease-out;
 }
 
-#img_menu_1 {
+#img_open {
   transform: translateX(-30vw);
   opacity: 0;
   max-width: 55%;
   top: 0px;
 }
 
-#img_menu_2 {
+#img_sea {
   transform: translateX(-15vw);
   opacity: 0;
   max-height: 90%;
   top: 0px;
 }
 
-#img_menu_3 {
+#img_island {
   opacity: 0;
   bottom: 0px;
   max-width: 50%;
+}
+
+#img_home {
+  opacity: 0;
+  bottom: 10%;
+  max-height: 70%;
 }
 
 .big_text {
@@ -407,16 +450,16 @@ body {
   transition: opacity 800ms var(--ease);
 }
 
-#text_menu_1, #text_menu_2, #text_menu_3 {
+#text_home, #text_open, #text_sea, #text_island {
   opacity: 0;
 }
 @media screen and (max-width: 1024px) {
-  #text_menu_1, #text_menu_2, #text_menu_3 {
+  #text_home, #text_open, #text_sea, #text_island {
     display: none;
   }
 }
 @media screen and (max-device-width: 1400px) and (orientation: landscape) {
-  #text_menu_1, #text_menu_2, #text_menu_3 {
+  #text_home, #text_open, #text_sea, #text_island {
     display: none;
   }
 }
@@ -435,13 +478,6 @@ body {
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .hamburger {
     right: 9%;
-    top: 5%;
-    left: auto;
-  }
-}
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  .hamburger {
-    right: 5%;
     top: 5%;
     left: auto;
   }
