@@ -19,17 +19,6 @@
   --line-height: 1.5;
 }
 
-.overlay-content a {
-
-  @media screen and (max-width:1024px) {
-
-    &:nth-child(1) {
-      background-image: url(src/home_tel.png);
-
-    }
-  }
-}
-
 .seas_list {
   position: absolute;
   width: 100%;
@@ -125,6 +114,9 @@
 }
 
 .filter {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   background-color: var(--background-color);
   width: 100vw;
   height: 100vh;
@@ -222,7 +214,7 @@ height: 1000px;
   }
 
   @media screen
-  and (max-device-width: 1600px)
+  and (max-device-width: 1400px)
   and (orientation: landscape){
   }
 

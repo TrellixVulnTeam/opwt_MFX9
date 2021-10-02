@@ -19,12 +19,6 @@
   --line-height: 1.5;
 }
 
-@media screen and (max-width: 1024px) {
-  .overlay-content a:nth-child(1) {
-    background-image: url(src/home_tel.png);
-  }
-}
-
 .seas_list {
   position: absolute;
   width: 100%;
@@ -99,6 +93,9 @@
 }
 
 .filter {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   background-color: var(--background-color);
   width: 100vw;
   height: 100vh;
