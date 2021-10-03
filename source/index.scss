@@ -12,7 +12,6 @@
   --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
   --space: 1rem;
   --font-primary: 'Quicksand', sans-serif;
-  --font-heading: 'Bebas Neue', cursive;
   --font-grande: 'Bebas Neue', cursive;
   --font-large: 36px;
   --font-medium: 30px;
@@ -335,31 +334,26 @@ body {
   position: absolute;
   margin: 0px;
   padding: 0px;
-  bottom: calc(10% + 150px);
-  left: calc(9% - 10px);
+  bottom: calc(10% + 90px);
+  left: calc(9% + 35px);
   line-height: 0;
   color: var(--gold);
   font-size: 60px;
   font-family: var(--font-grande);
   transform: rotate(-90deg);
+  transform-origin: top left;
 
   @media screen and (max-width:1024px) and (orientation: portrait) {
-    top: calc(10% + 90px);
-    right: calc(9% - 17px);
+    top: calc(5% + 90px);
+    right: calc(9% + 27px);
     left: auto;
     bottom: auto;
+    transform-origin: top right;
   }
 
   @media screen and (max-width:480px) and (orientation: portrait) {
-    top: calc(15% + 60px);
-    right: calc(5% - 17px);
-    left: auto;
-    bottom: auto;
-  }
-
-  @media screen and (max-width:320px) and (orientation: portrait) {
-    top: 27%;
-    right: calc(5% - 17px);
+    top: calc(5% + 90px);
+    right: calc(5% + 27px);
     left: auto;
     bottom: auto;
   }
@@ -551,6 +545,7 @@ body {
   and (orientation: landscape) {
     left: 9%;
     bottom: 10%;
+    right: auto;
   }
 }
 
@@ -618,7 +613,7 @@ body {
   }
 
   @media screen
-  and (max-device-width: 1023px)
+  and (max-device-width: 1400px)
   and (orientation: landscape) {
     right: 9%;
     top: 9%;

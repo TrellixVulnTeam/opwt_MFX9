@@ -157,7 +157,7 @@
   transform:scale(4)translate(-100px, 200px)rotate(190deg);
 }
 
-.ambito{
+.east_bg, .north_bg, .west_bg, .south_bg, .calm_bg, .allb_bg, .paradise_bg, .neww_bg, .sky_bg {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -165,7 +165,7 @@
   height: 100vh;
 }
 
-#ambito {
+#east_bg, #north_bg, #west_bg, #south_bg, #calm_bg, #allb_bg, #paradise_bg, #neww_bg, #sky_bg  {
   display: none;
   background-position: center;
   background-size: cover;
