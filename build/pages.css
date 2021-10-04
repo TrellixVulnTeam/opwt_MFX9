@@ -72,6 +72,7 @@ font-size: 24px;
   text-align: left;
   top: 5%;
   left: calc(9% + 90px);
+  font-size: 18px;
 }
 .content_page .pagetitle {
   font-size: 120px;
@@ -163,6 +164,9 @@ font-size: 24px;
     font-size: 30px;
   }
   .content_page a {
+    font-size: 18px;
+  }
+  .content_page p {
     font-size: 18px;
   }
 }
