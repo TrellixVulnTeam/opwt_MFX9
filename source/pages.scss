@@ -19,18 +19,28 @@
   --line-height: 1.5;
 }
 
+html {
+  background: url(src/grid.svg);
+  background-size: cover;
+  background-position: center;
+  touch-action: auto;
+  overflow: scroll;
+  background-color: var(--background-color);
+}
+
+/*
 .lettere {
 font-family: var(--font-grande);
-font-size: 36px;
+font-size: 30px;
 font-weight: 300;
 margin-top: 15px;
 
 @media screen and (max-width:1024px) and (orientation: portrait) {
-font-size: 36px;
+font-size: 30px;
 }
 
 @media screen and (max-width:768px) and (orientation: portrait) {
-font-size: 36px;
+font-size: 30px;
 }
 
 @media screen and (max-width:480px) and (orientation: portrait) {
@@ -54,8 +64,8 @@ and (orientation: landscape) {
 font-size: 24px;
 }
 }
-
-.islands_list {
+*/
+.content_page {
   position: absolute;
   width: calc(82% - 90px);
   height: fit-content;
@@ -63,43 +73,51 @@ font-size: 24px;
   top: 5%;
   left: calc(9% + 90px);
 
+  .pagetitle {
+ font-size: 120px;
+ opacity: 0.8;
+ color: var(--gold);
+ font-family: var(--font-grande);
+  }
+
+  .lettere {
+  font-family: var(--font-grande);
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+  p {
+    width: 60%;
+    font-size: 18px;
+  }
+
   ul {
-    padding: 0px;
+    padding: 0px 0px 0px 20px;
 
   }
 
   li {
     list-style: none;
+    color: var(--gold);
   }
 
   a {
     text-decoration: none;
     color: var(--black);
     font-family: var(--font-primary);
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 1.7;
     transition: all 0.3s ease-out;
+    padding-left: 30px;
 
     &:hover {
-      opacity: 0.6;
       color: var(--gold)
 
     }
   }
-/*
-  @media screen and (max-width:1024px) {
-    width: calc(82% - 90px);
-    top: 5%;
-    left: 9%;
-    font-size: 24px;
 
-
-    a:hover {
-      opacity: 1;
-
-    }
-  }
-*/
   @media screen and (max-width:768px) and (orientation: portrait) {
     width: calc(82% - 90px);
     top: 5%;
@@ -154,6 +172,26 @@ font-size: 24px;
       font-size: 18px;
     }
 
+  }
+
+}
+
+footer {
+  height: 180px;
+
+  .btt {
+    position: absolute;
+    bottom: calc(5% - 30px);
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: fit-content;
+
+    &:hover {
+      transform: translate(0px, -10px);
+    }
   }
 
 }
