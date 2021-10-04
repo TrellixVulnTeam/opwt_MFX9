@@ -78,6 +78,9 @@ font-size: 24px;
   opacity: 0.8;
   color: var(--gold);
   font-family: var(--font-grande);
+  line-height: 1;
+  margin-bottom: 20px;
+  margin-top: 5%;
 }
 .content_page .lettere {
   font-family: var(--font-grande);
@@ -104,39 +107,50 @@ font-size: 24px;
   font-weight: 500;
   line-height: 1.7;
   transition: all 0.3s ease-out;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .content_page a:hover {
   color: var(--gold);
 }
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .content_page {
-    width: calc(82% - 90px);
     top: 5%;
     left: 9%;
-    font-size: 24px;
+    font-size: 18px;
+  }
+  .content_page p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .content_page a {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .content_page {
-    width: 82%;
+    width: 90%;
     top: 5%;
     left: 5%;
+    font-size: 16px;
+  }
+  .content_page .pagetitle {
+    font-size: 60px;
+    opacity: 0.8;
+    color: var(--gold);
+    font-family: var(--font-grande);
+    margin-top: 0%;
+  }
+  .content_page p {
+    font-size: 16px;
+  }
+  .content_page ul {
+    padding: 0px 0px 0px 0px;
+  }
+  .content_page .lettere {
     font-size: 24px;
   }
   .content_page a {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 320px) and (orientation: portrait) {
-  .content_page {
-    width: 82%;
-    top: 5%;
-    left: 5%;
-    font-size: 24px;
-  }
-  .content_page a {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
@@ -145,11 +159,33 @@ font-size: 24px;
     top: 5%;
     left: calc(9% + 90px);
   }
+  .content_page .lettere {
+    font-size: 30px;
+  }
   .content_page a {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 @media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .content_page .pagetitle {
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+  }
+  .content_page p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .content_page ul {
+    padding: 0px 0px 0px 20px;
+  }
+  .content_page li {
+    list-style: none;
+    color: var(--gold);
+  }
+  .content_page .lettere {
+    font-size: 24px;
+  }
   .content_page a {
     font-size: 18px;
   }
@@ -163,7 +199,7 @@ footer .btt {
   bottom: calc(5% - 30px);
   font-size: 18px;
   color: var(--gold);
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
   width: fit-content;
