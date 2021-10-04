@@ -200,7 +200,7 @@ footer {
 }
 footer .btt {
   position: absolute;
-  bottom: calc(5% - 30px);
+  bottom: calc(5% - 18px);
   font-size: 18px;
   color: var(--gold);
   font-weight: 500;
