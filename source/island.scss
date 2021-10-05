@@ -18,19 +18,17 @@
   --font-text-m: 16px;
   --line-height: 1.5;
 }
-.back_back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+
+html {
   background: url(src/grid.svg);
   background-size: cover;
   background-position: center;
+  touch-action: auto;
+  overflow-y: overlay;
+  background-color: var(--background-color);
 }
-
 #background_anim{
-  position: absolute;
+  position: fixed;
   left:0px;
   top: 0px;
   width: 100%;
@@ -107,42 +105,6 @@ background-position: center center;
  }
 }
 
-.lettere {
-font-family: var(--font-grande);
-font-size: 36px;
-font-weight: 300;
-margin-top: 15px;
-
-@media screen and (max-width:1024px) and (orientation: portrait) {
-font-size: 36px;
-}
-
-@media screen and (max-width:768px) and (orientation: portrait) {
-font-size: 36px;
-}
-
-@media screen and (max-width:480px) and (orientation: portrait) {
-font-size: 24px;
-}
-
-@media screen and (max-width:320px) and (orientation: portrait) {
-font-size: 24px;
-}
-
-@media screen
-and (max-device-width: 1400px)
-and (min-device-width: 1024px)
-and (orientation: landscape) {
-font-size: 36px;
-}
-
-@media screen
-and (max-device-width: 1023px)
-and (orientation: landscape) {
-font-size: 24px;
-}
-}
-
 .islands_list {
   position: absolute;
   width: calc(82% - 90px);
@@ -150,74 +112,102 @@ font-size: 24px;
   text-align: left;
   top: 5%;
   left: calc(9% + 90px);
+  font-size: 18px;
+
+  .pagetitle {
+ font-size: 120px;
+ opacity: 0.8;
+ color: var(--gold);
+ font-family: var(--font-grande);
+ line-height: 1;
+ margin-bottom: 20px;
+ margin-top: 5%;
+  }
+
+  .lettere {
+  font-family: var(--font-grande);
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+  p {
+    width: 60%;
+    font-size: 18px;
+  }
 
   ul {
-    padding: 0px;
+    padding: 0px 0px 0px 20px;
 
   }
 
   li {
     list-style: none;
+    color: var(--gold);
   }
 
   a {
     text-decoration: none;
     color: var(--black);
     font-family: var(--font-primary);
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 1.7;
     transition: all 0.3s ease-out;
+    padding-left: 40px;
 
     &:hover {
-      opacity: 0.6;
-      color: var(--gold)
-
+      color: var(--gold);
     }
   }
-/*
-  @media screen and (max-width:1024px) {
-    width: calc(82% - 90px);
-    top: 5%;
-    left: 9%;
-    font-size: 24px;
+
+  @media screen and (max-width:1024px) and (orientation: portrait) {
+      top: 5%;
+      left: 9%;
+      font-size: 18px;
 
 
-    a:hover {
-      opacity: 1;
+      p {
+        width: 100%;
+        font-size: 18px;
+      }
 
-    }
-  }
-*/
-  @media screen and (max-width:768px) and (orientation: portrait) {
-    width: calc(82% - 90px);
-    top: 5%;
-    left: 9%;
-    font-size: 24px;
+      a {
+        font-size: 18px;
+      }
+
   }
 
 
   @media screen and (max-width:480px) and (orientation: portrait) {
-    width: 82%;
+    width: 90%;
     top: 5%;
     left: 5%;
-    font-size: 24px;
+    font-size: 16px;
 
-    a {
-      font-size: 18px;
+    .pagetitle {
+    font-size: 60px;
+    opacity: 0.8;
+    color: var(--gold);
+    font-family: var(--font-grande);
+    margin-top: 0%;
     }
 
-  }
-
-  @media screen and (max-width:320px) and (orientation: portrait) {
-width: 82%;
-top: 5%;
-left: 5%;
-font-size: 24px;
-
-    a {
-      font-size: 18px;
+    p {
+      font-size: 16px;
     }
 
+    ul {
+      padding: 0px 0px 0px 0px;
+    }
+
+    .lettere {
+      font-size: 24px;
+    }
+
+    a {
+      font-size: 16px;
+    }
   }
 
   @media screen
@@ -228,8 +218,16 @@ font-size: 24px;
       top: 5%;
       left: calc(9% + 90px);
 
+      .lettere {
+        font-size: 30px;
+      }
+
     a {
-      font-size: 24px;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 18px;
     }
 
   }
@@ -237,6 +235,30 @@ font-size: 24px;
   @media screen
   and (max-device-width: 1023px)
   and (orientation: landscape) {
+    .pagetitle {
+   font-size: 60px;
+   margin-bottom: 20px;
+   margin-top: 5%;
+    }
+
+    p {
+      width: 100%;
+      font-size: 18px;
+    }
+
+    ul {
+      padding: 0px 0px 0px 20px;
+
+    }
+
+    li {
+      list-style: none;
+      color: var(--gold);
+    }
+
+    .lettere {
+      font-size: 24px;
+    }
 
     a {
       font-size: 18px;

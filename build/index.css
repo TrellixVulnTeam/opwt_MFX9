@@ -296,6 +296,7 @@ body {
     opacity: 0;
   }
 }
+/*
 .title {
   position: absolute;
   margin: 0px;
@@ -308,25 +309,22 @@ body {
   font-family: var(--font-grande);
   transform: rotate(-90deg);
   transform-origin: top left;
-}
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-  .title {
+
+  @media screen and (max-width:1024px) and (orientation: portrait) {
     top: calc(5% + 90px);
     right: calc(9% + 27px);
     left: auto;
     bottom: auto;
     transform-origin: top right;
   }
-}
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  .title {
+
+  @media screen and (max-width:480px) and (orientation: portrait) {
     top: calc(5% + 90px);
     right: calc(5% + 27px);
     left: auto;
     bottom: auto;
   }
-}
-
+}*/
 .overlay {
   height: 100%;
   width: 0%;

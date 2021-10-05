@@ -19,20 +19,17 @@
   --line-height: 1.5;
 }
 
-.back_back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+html {
   background: url(src/grid.svg);
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  touch-action: auto;
+  overflow-y: overlay;
+  background-color: var(--background-color);
 }
 
 #background_anim {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -106,43 +103,6 @@
     transform: translate(0, -400vw);
   }
 }
-.lettere {
-  font-family: var(--font-grande);
-  font-size: 36px;
-  font-weight: 300;
-  margin-top: 15px;
-}
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-  .lettere {
-    font-size: 36px;
-  }
-}
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  .lettere {
-    font-size: 36px;
-  }
-}
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  .lettere {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 320px) and (orientation: portrait) {
-  .lettere {
-    font-size: 24px;
-  }
-}
-@media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
-  .lettere {
-    font-size: 36px;
-  }
-}
-@media screen and (max-device-width: 1023px) and (orientation: landscape) {
-  .lettere {
-    font-size: 24px;
-  }
-}
-
 .islands_list {
   position: absolute;
   width: calc(82% - 90px);
@@ -150,67 +110,86 @@
   text-align: left;
   top: 5%;
   left: calc(9% + 90px);
-  /*
-    @media screen and (max-width:1024px) {
-      width: calc(82% - 90px);
-      top: 5%;
-      left: 9%;
-      font-size: 24px;
-
-
-      a:hover {
-        opacity: 1;
-
-      }
-    }
-  */
+  font-size: 18px;
+}
+.islands_list .pagetitle {
+  font-size: 120px;
+  opacity: 0.8;
+  color: var(--gold);
+  font-family: var(--font-grande);
+  line-height: 1;
+  margin-bottom: 20px;
+  margin-top: 5%;
+}
+.islands_list .lettere {
+  font-family: var(--font-grande);
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+.islands_list p {
+  width: 60%;
+  font-size: 18px;
 }
 .islands_list ul {
-  padding: 0px;
+  padding: 0px 0px 0px 20px;
 }
 .islands_list li {
   list-style: none;
+  color: var(--gold);
 }
 .islands_list a {
   text-decoration: none;
   color: var(--black);
   font-family: var(--font-primary);
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.7;
   transition: all 0.3s ease-out;
+  padding-left: 40px;
 }
 .islands_list a:hover {
-  opacity: 0.6;
   color: var(--gold);
 }
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .islands_list {
-    width: calc(82% - 90px);
     top: 5%;
     left: 9%;
-    font-size: 24px;
+    font-size: 18px;
+  }
+  .islands_list p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .islands_list a {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .islands_list {
-    width: 82%;
+    width: 90%;
     top: 5%;
     left: 5%;
+    font-size: 16px;
+  }
+  .islands_list .pagetitle {
+    font-size: 60px;
+    opacity: 0.8;
+    color: var(--gold);
+    font-family: var(--font-grande);
+    margin-top: 0%;
+  }
+  .islands_list p {
+    font-size: 16px;
+  }
+  .islands_list ul {
+    padding: 0px 0px 0px 0px;
+  }
+  .islands_list .lettere {
     font-size: 24px;
   }
   .islands_list a {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 320px) and (orientation: portrait) {
-  .islands_list {
-    width: 82%;
-    top: 5%;
-    left: 5%;
-    font-size: 24px;
-  }
-  .islands_list a {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
@@ -219,11 +198,36 @@
     top: 5%;
     left: calc(9% + 90px);
   }
+  .islands_list .lettere {
+    font-size: 30px;
+  }
   .islands_list a {
-    font-size: 24px;
+    font-size: 18px;
+  }
+  .islands_list p {
+    font-size: 18px;
   }
 }
 @media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .islands_list .pagetitle {
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+  }
+  .islands_list p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .islands_list ul {
+    padding: 0px 0px 0px 20px;
+  }
+  .islands_list li {
+    list-style: none;
+    color: var(--gold);
+  }
+  .islands_list .lettere {
+    font-size: 24px;
+  }
   .islands_list a {
     font-size: 18px;
   }

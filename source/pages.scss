@@ -28,43 +28,6 @@ html {
   background-color: var(--background-color);
 }
 
-/*
-.lettere {
-font-family: var(--font-grande);
-font-size: 30px;
-font-weight: 300;
-margin-top: 15px;
-
-@media screen and (max-width:1024px) and (orientation: portrait) {
-font-size: 30px;
-}
-
-@media screen and (max-width:768px) and (orientation: portrait) {
-font-size: 30px;
-}
-
-@media screen and (max-width:480px) and (orientation: portrait) {
-font-size: 24px;
-}
-
-@media screen and (max-width:320px) and (orientation: portrait) {
-font-size: 24px;
-}
-
-@media screen
-and (max-device-width: 1400px)
-and (min-device-width: 1024px)
-and (orientation: landscape) {
-font-size: 36px;
-}
-
-@media screen
-and (max-device-width: 1023px)
-and (orientation: landscape) {
-font-size: 24px;
-}
-}
-*/
 .content_page {
   position: absolute;
   width: calc(82% - 90px);
