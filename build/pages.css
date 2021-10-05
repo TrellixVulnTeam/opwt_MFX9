@@ -20,22 +20,33 @@
 }
 
 html {
-  background: url(src/grid.svg);
-  background-size: cover;
-  background-position: center;
   touch-action: auto;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: var(--background-color);
 }
 
+body {
+  background: url(src/grid.svg);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  min-height: 100vh;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body {
+    background-size: 150%;
+  }
+}
+
 .content_page {
-  position: absolute;
+  position: relative;
   width: calc(82% - 90px);
   height: fit-content;
   text-align: left;
-  top: 5%;
-  left: calc(9% + 90px);
+  margin-top: 5%;
+  margin-left: calc(9% + 90px);
   font-size: 18px;
+  overflow: hidden;
 }
 .content_page .pagetitle {
   font-size: 120px;
@@ -44,7 +55,6 @@ html {
   font-family: var(--font-grande);
   line-height: 1;
   margin-bottom: 20px;
-  margin-top: 5%;
 }
 .content_page .lettere {
   font-family: var(--font-grande);
@@ -78,8 +88,8 @@ html {
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .content_page {
-    top: 5%;
-    left: 9%;
+    margin-top: 5%;
+    margin-left: 9%;
     font-size: 18px;
   }
   .content_page p {
@@ -93,8 +103,8 @@ html {
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .content_page {
     width: 90%;
-    top: 5%;
-    left: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
     font-size: 16px;
   }
   .content_page .pagetitle {
@@ -120,8 +130,8 @@ html {
 @media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
   .content_page {
     width: calc(82% - 90px);
-    top: 5%;
-    left: calc(9% + 90px);
+    margin-top: 5%;
+    margin-left: calc(9% + 90px);
   }
   .content_page .lettere {
     font-size: 30px;
@@ -163,7 +173,8 @@ footer {
 }
 footer .btt {
   position: absolute;
-  bottom: calc(5% - 18px);
+  margin-top: 40px;
+  margin-bottom: calc(5% - 18px);
   font-size: 18px;
   color: var(--gold);
   font-weight: 500;
@@ -173,6 +184,13 @@ footer .btt {
 }
 footer .btt:hover {
   transform: translate(0px, -10px);
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=pages.css.map */

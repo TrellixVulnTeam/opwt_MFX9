@@ -21,10 +21,6 @@
       </div>
   </div>
 
-  <div class="filter">
-
-  </div>
-
   <div id="myNav" class="overlay">
     <img src="../src/home_map.png" alt="home" class="img_menu" id="img_home">
     <img src="../src/mappe_map.png" alt="map" class="img_menu" id="img_open">
@@ -79,9 +75,9 @@
         <li><a href="#">Conomi Islands</a> not already avaiable</li>
         <li><a href="#">Cozia</a> not already avaiable</li>
         <li class="lettere">/D</li>
-        <li><a href="../build/islands/down_island.html">Down Island</a></li>
+        <li><a href="../islands/down_island.html">Down Island</a></li>
         <li class="lettere">/F</li>
-        <li><a href="../build/islands/foosha_village.html">Foosha Village</a></li>
+        <li><a href="../islands/foosha_village.html">Foosha Village</a></li>
         <li><a href="#">Frauce Kingdom</a> not already avaiable</li>
         <li class="lettere">/G</li>
         <li><a href="#">Gecko Islands</a> not already avaiable</li>
@@ -137,13 +133,13 @@
       function openNav() {
       $('#myNav').css('width','100%');
       $('html').css('touch-action','pinch-zoom');
-      $('html').css('overflow', 'hidden');
+      $('html').css('overflow-y', 'hidden');
       }
 
       function closeNav() {
       $('#myNav').css('width','0%');;
       $('html').css('touch-action','auto');
-      $('html').css('overflow', 'scroll');
+      $('html').css('overflow-y', 'scroll');
       }
 
       var delay = (function(){

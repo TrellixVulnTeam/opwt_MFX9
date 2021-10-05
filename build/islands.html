@@ -20,11 +20,7 @@
 
       </div>
   </div>
-<div class="back_back">
-
-</div>
   <div class="background_anim" id="background_anim">
-  <!--  <img id="background_anim" src="src/back_island.svg" alt="">-->
   </div>
 
   <div id="myNav" class="overlay">
@@ -102,15 +98,9 @@
         <li><a href="#">77th Branch</a> not already avaiable</li>
       </ul>
 
-
-
-
-
-
-
-
-
-
+      <footer>
+        <p class="btt" id="btt">Back to top</p>
+      </footer>
 
     </main>
 
@@ -124,12 +114,20 @@
         $(".caricamento").fadeOut("slow");;
       });
 
+      $('#btt').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+      });
+
       function openNav() {
-      document.getElementById("myNav").style.width = "100%";
+      $('#myNav').css('width','100%');
+      $('html').css('touch-action','pinch-zoom');
+      $('html').css('overflow-y', 'hidden');
       }
 
       function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
+      $('#myNav').css('width','0%');;
+      $('html').css('touch-action','auto');
+      $('html').css('overflow-y', 'scroll');
       }
 
       var delay = (function(){

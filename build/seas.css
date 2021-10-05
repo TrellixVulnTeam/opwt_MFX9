@@ -152,16 +152,6 @@
   background-size: cover;
 }
 
-.filter {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: var(--background-color);
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.6;
-}
-
 #back_s,
 #wind_s,
 #over_s {
