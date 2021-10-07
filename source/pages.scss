@@ -50,26 +50,42 @@ body {
 
   .back{
     position: relative;
+    float: left;
     cursor: pointer;
     width: fit-content;
     font-weight: 600;
     line-height:1;
     font-size: 18px;
-     margin-bottom: 5px;
+     margin-bottom: 0px;
      transition: all 0.3s;
      z-index: 100;
+     vertical-align: baseline;
+     display: inline-block;
 
      &:hover {
        transform: translate(-20px, 0px);
        color: var(--gold);
+       fill: var(--gold);
      }
+
+     #ancor {
+       float: left;
+       margin-top: 0.125em;
+       height: 0.85em;
+       margin-right: 4px;
+       vertical-align: baseline;
+       display: inline-block;
+     }
+
+
+
   }
 
  .pagetitle {
+   clear: both;
    position: relative;
  font-size: 120px;
- opacity: 0.8;
- color: var(--gold);
+  color: var(--gold);
  font-family: var(--font-grande);
  line-height: 1;
  margin-bottom: 20px;
@@ -81,7 +97,17 @@ body {
   font-family: var(--font-grande);
   font-size: 30px;
   font-weight: 300;
-  margin-top: 15px;
+  margin-top: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  opacity: 0.6;
+
+  img {
+    height: 1em;
+    margin-right: 4px;
+    vertical-align: middle;
+    display: inline-block;
+  }
 }
 
   p {
@@ -109,7 +135,7 @@ body {
     color: var(--black);
     font-family: var(--font-primary);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.7;
     transition: all 0.3s ease-out;
     padding-left: 40px;
@@ -227,7 +253,11 @@ body {
 }
 
 footer {
+  position: relative;
+  float: left;
+  clear: both;
   height: 180px;
+  width: 100%;
 
   .btt {
     position: absolute;
@@ -346,4 +376,14 @@ z-index: 0;
     margin-right: 5px;
     font-family: var(--font-japan);
   }
+}
+
+h6 {
+  font-family: var(--font-grande);
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--gold);
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
 }
