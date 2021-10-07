@@ -55,6 +55,9 @@
   </span>
 
     <main class="content_page">
+      <p class="back" id="back"> < SEAS </p>
+      <div class="divisorio">
+      </div>
       <p class="pagetitle">Sky Ocean</p>
       <p>Coming soon</p>
     <!--  <p>The East Blue is an ocean in the Blue Sea. <br>
@@ -129,6 +132,10 @@
 
       $('#btt').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
+      });
+      
+      $('#back').click(function(){
+        window.history.back();
       });
 
       function openNav() {

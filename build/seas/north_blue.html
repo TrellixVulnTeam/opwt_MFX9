@@ -55,6 +55,9 @@
   </span>
 
     <main class="content_page">
+      <p class="back" id="back"> < SEAS </p>
+      <div class="divisorio">
+      </div>
       <p class="pagetitle">North Blue</p>
       <p>Coming soon</p>
     <!--  <p>The East Blue is an ocean in the Blue Sea. <br>
@@ -131,6 +134,10 @@
         $("html, body").animate({ scrollTop: 0 }, 600);
       });
 
+      $('#back').click(function(){
+        window.history.back();
+      });
+
       function openNav() {
       $('#myNav').css('width','100%');
       $('html').css('touch-action','pinch-zoom');
@@ -140,7 +147,7 @@
       function closeNav() {
       $('#myNav').css('width','0%');;
       $('html').css('touch-action','auto');
-      $('html').css('overflow', 'scroll');
+      $('html').css('overflow', 'overlay');
       }
 
       var delay = (function(){
