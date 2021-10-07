@@ -1,0 +1,263 @@
+:root {
+  --blue: #0055b3;
+  --red: #ff0000;
+  --black: #1b1e23;
+  --gold: #fcc201;
+  --background-color: #e6e6e6;
+  --duration: 1s;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --space: 1rem;
+  --font-primary: "Quicksand", sans-serif;
+  --font-heading: "Bebas Neue", cursive;
+  --font-grande: "Bebas Neue", cursive;
+  --font-large: 36px;
+  --font-medium: 30px;
+  --font-text: 18px;
+  --font-large-m: 21px;
+  --font-medium-m: 18px;
+  --font-text-m: 16px;
+  --line-height: 1.5;
+}
+
+html {
+  touch-action: auto;
+  overflow-y: overlay;
+  background-color: var(--background-color);
+}
+
+body {
+  background: url(src/grid.svg);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: repeat;
+  min-height: 100vh;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body {
+    background-size: 150%;
+  }
+}
+
+#background_anim {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 400vw;
+  opacity: 0.33;
+  background: url(src/back_island.svg);
+  background-size: cover;
+  -webkit-animation: scroll_is 45s;
+  -moz-animation: scroll_is 45s;
+  animation: scroll_is 45s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  #background_anim {
+    -webkit-animation: scroll_is 45s;
+    -moz-animation: scroll_is 45s;
+    animation: scroll_is 45s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  #background_anim {
+    -webkit-animation: scroll_is 45s;
+    -moz-animation: scroll_is 45s;
+    animation: scroll_is 45s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  #background_anim {
+    animation: none;
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #background_anim {
+    animation: none;
+    background-position: center center;
+  }
+}
+@media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
+  #background_anim {
+    -webkit-animation: scroll_is 45s;
+    -moz-animation: scroll_is 45s;
+    animation: scroll_is 45s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  #background_anim {
+    animation: none;
+    background-position: center center;
+  }
+}
+
+@keyframes scroll_is {
+  0% {
+    -webkit-transform: translate(0, 1200);
+    transform: translate(0, 100vh);
+  }
+  100% {
+    -webkit-transform: translate(0, -6300px);
+    transform: translate(0, -400vw);
+  }
+}
+.islands_list {
+  position: relative;
+  width: calc(82% - 90px);
+  height: fit-content;
+  text-align: left;
+  margin-top: 5%;
+  margin-left: calc(9% + 90px);
+  font-size: 18px;
+}
+.islands_list .pagetitle {
+  font-size: 120px;
+  opacity: 0.8;
+  color: var(--gold);
+  font-family: var(--font-grande);
+  line-height: 1;
+  margin-bottom: 20px;
+  margin-top: 5%;
+}
+.islands_list .lettere {
+  font-family: var(--font-grande);
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+.islands_list p {
+  width: 60%;
+  font-size: 18px;
+}
+.islands_list ul {
+  padding: 0px 0px 0px 20px;
+}
+.islands_list li {
+  list-style: none;
+  color: var(--gold);
+}
+.islands_list a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  transition: all 0.3s ease-out;
+  padding-left: 40px;
+}
+.islands_list a:hover {
+  color: var(--gold);
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .islands_list {
+    margin-top: 5%;
+    margin-left: 9%;
+    font-size: 18px;
+  }
+  .islands_list p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .islands_list a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .islands_list {
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 16px;
+  }
+  .islands_list .pagetitle {
+    font-size: 60px;
+    opacity: 0.8;
+    color: var(--gold);
+    font-family: var(--font-grande);
+    margin-top: 0%;
+  }
+  .islands_list p {
+    font-size: 16px;
+  }
+  .islands_list ul {
+    padding: 0px 0px 0px 0px;
+  }
+  .islands_list .lettere {
+    font-size: 24px;
+  }
+  .islands_list a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
+  .islands_list {
+    width: calc(82% - 90px);
+    margin-top: 5%;
+    margin-left: calc(9% + 90px);
+  }
+  .islands_list .lettere {
+    font-size: 30px;
+  }
+  .islands_list a {
+    font-size: 18px;
+  }
+  .islands_list p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .islands_list .pagetitle {
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+  }
+  .islands_list p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .islands_list ul {
+    padding: 0px 0px 0px 20px;
+  }
+  .islands_list li {
+    list-style: none;
+    color: var(--gold);
+  }
+  .islands_list .lettere {
+    font-size: 24px;
+  }
+  .islands_list a {
+    font-size: 18px;
+  }
+}
+
+footer {
+  height: 180px;
+}
+footer .btt {
+  position: absolute;
+  bottom: calc(5% - 18px);
+  font-size: 18px;
+  color: var(--gold);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+}
+footer .btt:hover {
+  transform: translate(0px, -10px);
+}
+
+/*# sourceMappingURL=island.css.map */

@@ -1,0 +1,99 @@
+.navigation {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: scroll;
+  width: 100vw;
+  height: 100vh;
+}
+
+#griglia_superiore,
+#full_map {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 8000px;
+  opacity: 0.6;
+}
+
+#full_tx_map {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 8000px;
+  opacity: 1;
+}
+
+.place {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  transition: all 0.8s;
+  opacity: 0.6;
+}
+@media screen and (max-width: 1024px) {
+  .place {
+    animation: pulse 4s var(--ease) infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.island {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  transition: all 0.8s;
+  opacity: 0.6;
+}
+@media screen and (max-width: 1024px) {
+  .island {
+    animation: pulse 3s var(--ease) infinite;
+  }
+}
+
+#down_island {
+  position: absolute;
+  left: 14790px;
+  top: 486px;
+}
+
+#foosha_village {
+  position: absolute;
+  left: 14988px;
+  top: 752px;
+}
+
+.island:hover {
+  transform: scale(0.6);
+  border: 3px solid var(--gold);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.place:hover {
+  transform: scale(0.6);
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  opacity: 1;
+}
+
+#wano {
+  position: absolute;
+  left: 6380px;
+  top: 3530px;
+}
+
+/*# sourceMappingURL=map.css.map */
