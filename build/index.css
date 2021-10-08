@@ -8,9 +8,7 @@
   --black: #1b1e23;
   --gold: #fcc201;
   --background-color: #e6e6e6;
-  --duration: 1s;
   --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --space: 1rem;
   --font-primary: "Quicksand", sans-serif;
   --font-grande: "Bebas Neue", cursive;
   --font-japan: "Sawarabi Mincho", sans-serif;
@@ -20,7 +18,6 @@
   --font-large-m: 21px;
   --font-medium-m: 18px;
   --font-text-m: 16px;
-  --line-height: 1.5;
 }
 
 * {
@@ -308,35 +305,6 @@ body {
     opacity: 0;
   }
 }
-/*
-.title {
-  position: absolute;
-  margin: 0px;
-  padding: 0px;
-  bottom: calc(10% + 90px);
-  left: calc(9% + 35px);
-  line-height: 0;
-  color: var(--gold);
-  font-size: 60px;
-  font-family: var(--font-grande);
-  transform: rotate(-90deg);
-  transform-origin: top left;
-
-  @media screen and (max-width:1024px) and (orientation: portrait) {
-    top: calc(5% + 90px);
-    right: calc(9% + 27px);
-    left: auto;
-    bottom: auto;
-    transform-origin: top right;
-  }
-
-  @media screen and (max-width:480px) and (orientation: portrait) {
-    top: calc(5% + 90px);
-    right: calc(5% + 27px);
-    left: auto;
-    bottom: auto;
-  }
-}*/
 .overlay {
   height: 100%;
   width: 0%;
@@ -351,13 +319,57 @@ body {
   overflow: hidden;
   transition: 0.5s;
 }
+.overlay .language_change {
+  position: absolute;
+  top: calc(10% + 90px);
+  right: 9%;
+  width: 60px;
+  text-align: center;
+  opacity: 0.8;
+}
+.overlay .language_change .current {
+  padding: 3px;
+  background-color: var(--background-color);
+  color: var(--black);
+  border-radius: 3px;
+}
+.overlay .language_change a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-size: 12px;
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .overlay .language_change {
+    top: calc(5% + 90px);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .overlay .language_change {
+    right: 5%;
+    opacity: 1;
+  }
+}
+@media screen and (max-device-width: 1400px) and (orientation: landscape) {
+  .overlay .language_change {
+    right: 9%;
+    top: calc(9% + 90px);
+    opacity: 1;
+  }
+}
 
 .overlay-content {
   position: absolute;
   bottom: 10%;
   left: 9%;
-  width: 50%;
+  width: fit-content;
   text-align: left;
+}
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .overlay-content {
+    bottom: 5%;
+    left: 5%;
+  }
 }
 .overlay-content a {
   text-decoration: none;
@@ -368,18 +380,14 @@ body {
   opacity: 0.7;
   display: block;
   transition: 400ms ease-out;
+  width: fit-content;
 }
 .overlay-content a:hover {
-  font-size: 48px;
   opacity: 1;
   color: var(--gold);
 }
-.overlay-content a:focus {
-  opacity: 1;
-}
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .overlay-content a {
-    font-size: 48px;
     opacity: 1;
   }
   .overlay-content a:hover {
@@ -388,7 +396,7 @@ body {
     color: var(--gold);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
   .overlay-content a {
     font-size: 40px;
   }
@@ -396,7 +404,7 @@ body {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (orientation: portrait) {
   .overlay-content a {
     font-size: 36px;
   }
@@ -406,9 +414,22 @@ body {
 }
 @media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
   .overlay-content a {
+    font-size: 48px;
     opacity: 1;
   }
+  .overlay-content a:hover {
+    font-size: 48px;
+  }
 }
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .overlay-content a {
+    font-size: 40px;
+  }
+  .overlay-content a:hover {
+    font-size: 40px;
+  }
+}
+
 .overlay img {
   position: absolute;
   right: 0px;
@@ -456,7 +477,7 @@ body {
 #text_home, #text_open, #text_sea, #text_island {
   opacity: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   #text_home, #text_open, #text_sea, #text_island {
     display: none;
   }
@@ -480,15 +501,15 @@ body {
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .hamburger {
+    top: 10%;
     right: 9%;
-    top: 5%;
     left: auto;
   }
 }
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .hamburger {
-    right: 5%;
     top: 5%;
+    right: 5%;
     left: auto;
   }
 }
@@ -496,7 +517,6 @@ body {
   .hamburger {
     left: 9%;
     bottom: 10%;
-    right: auto;
   }
 }
 
@@ -533,43 +553,33 @@ body {
   z-index: 99;
 }
 .closebtn:hover {
-  font-size: var(--font-large);
   opacity: 1;
   color: var(--gold);
 }
 .closebtn:focus {
-  font-size: var(--font-large);
   opacity: 1;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .closebtn {
+    top: 10%;
+    right: 9%;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .closebtn {
+    top: 5%;
+    right: 5%;
+  }
+}
+@media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
   .closebtn {
     right: 9%;
-    top: 5%;
-    left: auto;
-    opacity: 1;
+    top: 10%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
   .closebtn {
-    right: 5%;
-    top: 5%;
-    left: auto;
-    opacity: 1;
-  }
-}
-@media screen and (max-width: 480px) {
-  .closebtn {
-    right: 5%;
-    top: 5%;
-    left: auto;
-    opacity: 1;
-  }
-}
-@media screen and (max-device-width: 1400px) and (orientation: landscape) {
-  .closebtn {
-    right: 9%;
-    top: 9%;
-    left: auto;
     opacity: 1;
   }
 }
@@ -845,24 +855,6 @@ h2 {
 ::-webkit-scrollbar-thumb {
   background: var(--gold);
   border-radius: 6px;
-}
-
-.language_change {
-  position: absolute;
-  bottom: 5%;
-  left: 10%;
-}
-.language_change a {
-  text-decoration: none;
-  color: var(--black);
-  font-size: 12px;
-}
-
-.current {
-  padding: 3px;
-  background-color: var(--gold);
-  color: white;
-  border-radius: 3px;
 }
 
 /*# sourceMappingURL=index.css.map */

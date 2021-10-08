@@ -37,7 +37,10 @@
 
     <!--<span class="island" id="down_island"></span>-->
     <span class="island" id="wano">Current Sunny position</span>
-
+    <div class="language_change">
+      <a href="" id="en" class="current">EN</a>
+      <a href="" id="it">IT</a>
+    </div>
 
 
   </div>
@@ -57,9 +60,9 @@
 </a>
 
   <div class="overlay-content">
-    <a href="./index" id="link_menu_1"><nobr>Home</nobr></a>
-    <a href="./seas" id="link_menu_2">Seas</a>
-    <a href="./islands" id="link_menu_3">Islands</a>
+    <a href="./index.html" id="link_menu_1"><nobr>Home</nobr></a>
+    <a href="./seas.html" id="link_menu_2">Seas</a>
+    <a href="./islands.html" id="link_menu_3">Islands</a>
   </div>
 
 </div>
@@ -73,9 +76,6 @@
 </span>
 
 
-  <!--<main class="main-content">
-  </main>-->
-
   <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -88,13 +88,41 @@
   var width2 = (window.innerWidth/2);
   var positionx = positionleft - width2;
   var positiony = positiontop - height2;
-    $(window).on('load', function() {
-      $(".caricamento").fadeOut("slow");
-      $('.navigation').animate({
-        scrollTop: positiony,
-        scrollLeft: positionx
-      }, 10);
-    });
+
+    var url = window.location.toString();
+    console.log(url);
+
+    var check = "opwt"
+    var aggiunta = "/it"
+
+        var part = url.split("opwt");
+        var iturl = part[0] + check + aggiunta + part[1];
+
+    console.log(iturl);
+
+        $(window).on('load', function() {
+          $(".caricamento").fadeOut("slow");
+          $('.navigation').animate({
+            scrollTop: positiony,
+            scrollLeft: positionx
+          }, 10);
+          if (localStorage.getItem('language') == null) {
+          localStorage.setItem('language', 'EN');
+        }
+          else if (localStorage.getItem('language') === 'IT') {
+          window.location.href = iturl;
+        }
+        });
+
+        $("#it").on('click', function() {
+          localStorage.setItem('language', 'IT');
+          window.location.href == iturl;
+        });
+
+        $("#en").on('click', function() {
+          localStorage.setItem('language', 'EN');
+        });
+
 
 function openNav() {
 document.getElementById("myNav").style.width = "100%";
@@ -183,7 +211,7 @@ $(function() {
 
 $(".island, .place").on("click", function() {
   var id = $(this).attr("id");
-  window.location.href = "./islands/" + id + ".html"
+  window.location.href = "./island/" + id + ".html"
 })
 
 </script>
