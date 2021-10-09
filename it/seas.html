@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title> Seas - One Piece World Tour</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="seas.css">
-    <link rel="icon" href="src/icon_favicon.svg">
+    <link rel="stylesheet" href="build/index.css">
+    <link rel="stylesheet" href="build/seas.css">
+    <link rel="icon" href="build/src/icon_favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -33,11 +33,11 @@
 
 <div class="animated_background" id="animated_background">
 
-  <img src="src/back_sea.svg" alt="background" class="back_s" id="back_s">
-  <img src="src/back_sea_m.svg" alt="background" class="back_s" id="back_s_m">
-  <img src="src/over_sea.svg" alt="background" class="over_s" id="over_s">
-  <img src="src/windsea.svg" alt="background" class="wind_s" id="wind_s">
-  <img src="src/windsea_m.svg" alt="background" class="wind_s" id="wind_s_m">
+  <img src="build/src/back_sea.svg" alt="background" class="back_s" id="back_s">
+  <img src="build/src/back_sea_m.svg" alt="background" class="back_s" id="back_s_m">
+  <img src="build/src/over_sea.svg" alt="background" class="over_s" id="over_s">
+  <img src="build/src/windsea.svg" alt="background" class="wind_s" id="wind_s">
+  <img src="build/src/windsea_m.svg" alt="background" class="wind_s" id="wind_s_m">
 
 
 
@@ -47,9 +47,9 @@
 </div>
 
   <div id="myNav" class="overlay">
-    <img src="src/home_map.png" alt="home" class="img_menu" id="img_home">
-    <img src="src/mappe_map.png" alt="map" class="img_menu" id="img_open">
-    <img src="src/raftel_map.png" alt="islands" class="img_menu" id="img_island">
+    <img src="build/src/home_map.png" alt="home" class="img_menu" id="img_home">
+    <img src="build/src/mappe_map.png" alt="map" class="img_menu" id="img_open">
+    <img src="build/src/raftel_map.png" alt="islands" class="img_menu" id="img_island">
     <p id="text_home" class="big_text">HOME</p>
     <p id="text_open" class="big_text"><nobr>OPEN WORLD</nobr></p>
     <p id="text_island" class="big_text">ISLANDS</p>
@@ -60,10 +60,17 @@
         <path id="closeturn" d="M56.87,16.66h0l-.27-.52h0l-.27-.52h0A29.94,29.94,0,0,0,31.88.06V0l-.59,0-.58,0V0A30.09,30.09,0,0,0,5,13.4H5l-.31.5-.32.49h0a30.1,30.1,0,0,0-1.25,29h0l.27.52h0l.27.52h0A29.94,29.94,0,0,0,28.12,59.94v0l.59,0,.58,0h0L30,60A30.15,30.15,0,0,0,55,46.6h0l.31-.5.32-.49h0A30.1,30.1,0,0,0,56.87,16.66ZM29,53.48a23.57,23.57,0,0,1-11.61-3.66h0A23.48,23.48,0,1,1,29,53.48ZM45.48,5.67A28.86,28.86,0,0,1,55.3,16.15l-3.7,1.93a24.63,24.63,0,0,0-20-12.7l.18-4.16A28.78,28.78,0,0,1,45.48,5.67ZM4.16,42.8A28.94,28.94,0,0,1,5.36,15l3.51,2.23a24.79,24.79,0,0,0-1,23.63l-1.09.57Zm25.18,16,.18-4.16a24.73,24.73,0,0,0,21-10.93L54,46A28.94,28.94,0,0,1,29.34,58.83Z"/></svg>
     </a>
 
+    <div class="language_change">
+      <ul>
+        <li id="en" class="current">EN</li>
+        <li id="it">IT</li>
+      </ul>
+    </div>
+
     <div class="overlay-content">
-      <a href="../index.html" id="link_menu_1"><nobr>Home</nobr></a>
-      <a href="openworld.html" id="link_menu_2">Open World</a>
-      <a href="islands.html" id="link_menu_3">Islands</a>
+      <a href="./index.html" id="link_menu_1"><nobr>Home</nobr></a>
+      <a href="./openworld.html" id="link_menu_2">Open World</a>
+      <a href="./islands.html" id="link_menu_3">Islands</a>
     </div>
 
   </div>
@@ -78,15 +85,15 @@
 
     <main class="seas_list">
       <ul>
-        <li><a href="../build/seas/east_blue.html" id="east">East Blue</a></li>
-        <li><a href="../build/seas/north_blue.html" id="north">North Blue</a></li>
-        <li><a href="../build/seas/west_blue.html" id="west">West Blue</a></li>
-        <li><a href="../build/seas/south_blue.html" id="south">South Blue</a></li>
-        <li><a href="../build/seas/calm_belt.html" id="calm">Calm Belt</a></li>
-        <li><a href="../build/seas/all_blue.html" id="allb">All Blue</a></li>
-        <li><a href="../build/seas/paradise.html" id="paradise">Paradise</a></li>
-        <li><a href="../build/seas/new_world.html" id="neww">New World</a></li>
-        <li><a href="../build/seas/sky_ocean.html" id="sky">Sky Ocean</a></li>
+        <li><a href="./sea/east_blue.html" id="east">East Blue</a></li>
+        <li><a href="./sea/north_blue.html" id="north">North Blue</a></li>
+        <li><a href="./sea/west_blue.html" id="west">West Blue</a></li>
+        <li><a href="./sea/south_blue.html" id="south">South Blue</a></li>
+        <li><a href="./sea/calm_belt.html" id="calm">Calm Belt</a></li>
+        <li><a href="./sea/all_blue.html" id="allb">All Blue</a></li>
+        <li><a href="./sea/paradise.html" id="paradise">Paradise</a></li>
+        <li><a href="./sea/new_world.html" id="neww">New World</a></li>
+        <li><a href="./sea/sky_ocean.html" id="sky">Sky Ocean</a></li>
       </ul>
 
 
@@ -107,17 +114,48 @@
     crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-      $(window).on('load', function() {
-        $(".caricamento").fadeOut("slow");;
+    var url = window.location.toString();
+
+    var check = "opwt"
+    var aggiunta = "/it"
+
+        var part = url.split("opwt");
+        var iturl = part[0] + check + aggiunta + part[1];
+
+        $(window).on('load', function() {
+          $(".caricamento").fadeOut("slow");
+          if (localStorage.getItem('language') == null) {
+          localStorage.setItem('language', 'EN');
+        }
+          else if (localStorage.getItem('language') == 'IT') {
+          window.location.href = iturl;
+        }
+        });
+
+        $("#it").on('click', function() {
+          localStorage.setItem('language', 'IT');
+          window.location.href = iturl;
+        });
+
+        $("#en").on('click', function() {
+          localStorage.setItem('language', 'EN');
+        });
+
+      $('#btt').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
       });
 
       function openNav() {
-      document.getElementById("myNav").style.width = "100%";
+      $('#myNav').css('left','0%');
+      $('html').css('touch-action','pinch-zoom');
+      $('html').css('overflow-y', 'hidden');
       }
 
       function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-      }img_open
+      $('#myNav').css('left','-100%');;
+      $('html').css('touch-action','auto');
+      $('html').css('overflow-y', 'scroll');
+      }
 
       var delay = (function(){
           var timer = 0;

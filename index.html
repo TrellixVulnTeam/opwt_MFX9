@@ -40,8 +40,8 @@
 
 <div class="language_change">
   <ul>
-    <li><a href="" id="en" class="current">EN</a></li>
-    <li><a href="" id="it">IT</a></li>
+    <li id="en" class="current">EN</li>
+    <li id="it">IT</li>
   </ul>
 </div>
 
@@ -91,27 +91,31 @@ var aggiunta = "/it"
       if (localStorage.getItem('language') == null) {
       localStorage.setItem('language', 'EN');
     }
-      else if (localStorage.getItem('language') === 'IT') {
+      else if (localStorage.getItem('language') == 'IT') {
       window.location.href = iturl;
     }
     });
 
     $("#it").on('click', function() {
       localStorage.setItem('language', 'IT');
-      window.location.href == iturl;
+      window.location.href = iturl;
     });
 
     $("#en").on('click', function() {
       localStorage.setItem('language', 'EN');
     });
 
-function openNav() {
-document.getElementById("myNav").style.left = "0%";
-}
+    function openNav() {
+    $('#myNav').css('left','0%');
+    $('html').css('touch-action','pinch-zoom');
+    $('html').css('overflow-y', 'hidden');
+    }
 
-function closeNav() {
-document.getElementById("myNav").style.left = "-100%";
-}
+    function closeNav() {
+    $('#myNav').css('left','-100%');;
+    $('html').css('touch-action','auto');
+    $('html').css('overflow-y', 'scroll');
+    }
 
 var delay = (function(){
     var timer = 0;

@@ -1,0 +1,76 @@
+/*
+.qualcosa {
+
+  istruzioni per desktop
+
+@media screen and (max-width:1024px) and (orientation: portrait){
+
+  tablet in verticale
+
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+
+  ipad e tablet in verticale
+
+}
+
+@media screen and (max-width:480px) and (orientation: portrait) {
+
+  iphone e telefoni in verticale
+
+}
+
+@media screen and (max-width:320px) and (orientation: portrait) {
+
+  iphone e telefoni vecchi in verticale
+
+}
+
+@media screen
+and (max-device-width: 1400px)
+and (min-device-width: 1024px)
+and (orientation: landscape) {
+
+  tablet in orizzontale e pagine con resize
+
+}
+
+@media screen
+and (max-device-width: 1023px)
+and (orientation: landscape) {
+
+  ipad e tablet in orizzontale, mobile in orizzontale e pagine con resize in orizzontale
+
+}
+
+}*/
+
+@media screen and (max-width:1024px) and (orientation: portrait){
+
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+
+}
+
+@media screen and (max-width:480px) and (orientation: portrait) {
+
+}
+
+@media screen and (max-width:320px) and (orientation: portrait) {
+
+}
+
+@media screen
+and (max-device-width: 1400px)
+and (min-device-width: 1024px)
+and (orientation: landscape) {
+
+}
+
+@media screen
+and (max-device-width: 1023px)
+and (orientation: landscape) {
+
+}

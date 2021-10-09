@@ -335,6 +335,11 @@ body {
   margin-bottom: 8px;
   opacity: 0.7;
   transition: all 0.8s ease-out;
+  width: fit-content;
+  color: var(--background-color);
+  font-size: 12px;
+  margin: 0 auto 8px auto;
+  cursor: pointer;
 }
 .overlay .language_change li:hover {
   opacity: 1;
@@ -344,11 +349,6 @@ body {
   background-color: var(--background-color);
   color: var(--black);
   border-radius: 3px;
-}
-.overlay .language_change a {
-  text-decoration: none;
-  color: var(--background-color);
-  font-size: 12px;
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .overlay .language_change li {
@@ -651,6 +651,7 @@ body {
   height: fit-content;
   margin: 10% 20px 0 20px;
   width: calc(100% - 40px);
+  line-height: 1.5;
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .titolo {

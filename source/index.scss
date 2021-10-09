@@ -370,6 +370,11 @@ body {
      margin-bottom: 8px;
      opacity: 0.7;
      transition: all 0.8s ease-out;
+     width: fit-content;
+     color: var(--background-color);
+     font-size: 12px;
+     margin: 0 auto 8px auto;
+     cursor: pointer;
 
      &:hover {
        opacity: 1;
@@ -382,12 +387,6 @@ body {
       color: var(--black);
       border-radius: 3px;
     }
-
-   a {
-     text-decoration: none;
-     color: var(--background-color);
-     font-size: 12px;
-   }
 
    @media screen and (max-width:1024px) and (orientation: portrait) {
      li {
@@ -702,6 +701,7 @@ body {
   height: fit-content;
   margin: 10% 20px 0 20px;
   width: calc(100% - 40px);
+  line-height: 1.5;
 
   @media screen and (max-width:1024px) and (orientation: portrait){
     margin: 60px 9% 60px 9%;
