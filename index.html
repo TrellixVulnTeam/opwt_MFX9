@@ -39,8 +39,10 @@
 </a>
 
 <div class="language_change">
-  <a href="" id="en" class="current">EN</a> <br>
-  <a href="" id="it">IT</a>
+  <ul>
+    <li><a href="" id="en" class="current">EN</a></li>
+    <li><a href="" id="it">IT</a></li>
+  </ul>
 </div>
 
   <div class="overlay-content">
@@ -77,15 +79,12 @@
   <script type="text/javascript">
 
 var url = window.location.toString();
-console.log(url);
 
 var check = "opwt"
 var aggiunta = "/it"
 
     var part = url.split("opwt");
     var iturl = part[0] + check + aggiunta + part[1];
-
-console.log(iturl);
 
     $(window).on('load', function() {
       $(".caricamento").fadeOut("slow");
@@ -107,11 +106,11 @@ console.log(iturl);
     });
 
 function openNav() {
-document.getElementById("myNav").style.width = "100%";
+document.getElementById("myNav").style.left = "0%";
 }
 
 function closeNav() {
-document.getElementById("myNav").style.width = "0%";
+document.getElementById("myNav").style.left = "-100%";
 }
 
 var delay = (function(){
