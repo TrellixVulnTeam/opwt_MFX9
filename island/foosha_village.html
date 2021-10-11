@@ -114,7 +114,6 @@
         var iturl = part[0] + check + aggiunta + part[1];
 
         var place = url.split("island/");
-        var placepage = place[1].replace(".html","");
 
         $(window).on('load', function() {
           $(".caricamento").fadeOut("slow");
@@ -140,7 +139,6 @@
       });
 
       $('#img_prev').css('background-image', 'url(../build/src/' + placepage + '.png)');
-      $('#path').text('la path è ' + placepage );
 
       function openNav() {
       $('#myNav').css('left','0%');
