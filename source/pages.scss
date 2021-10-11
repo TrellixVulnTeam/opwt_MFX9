@@ -613,6 +613,34 @@ h6 {
   font-size: 18px;
   overflow:  visible;
 
+  a{
+    white-space: nowrap;
+  }
+
+
+  h6 {
+    font-family: var(--font-grande);
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--gold);
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1;
+    margin-top: 52px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+
+
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      height: 30px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+  }
+
   .back{
     position: relative;
     float: left;
@@ -707,10 +735,20 @@ h6 {
      }
    }
 
+   .maps {
+     margin-top: 20px;
+     max-width: 60%;
+     margin-bottom: 20px;
+   }
+
    @media screen and (max-width:1024px) and (orientation: portrait) {
        margin-top: 10vh;
        margin-left: 9vw;
        font-size: 18px;
+
+       .maps {
+         max-width: 100%;
+       }
 
 
        p {
@@ -730,6 +768,7 @@ h6 {
      margin-top: 5vh;
      margin-left: 5vw;
      font-size: 16px;
+
 
      .pagetitle {
      font-size: 60px;
@@ -781,6 +820,11 @@ h6 {
    @media screen
    and (max-device-width: 1023px)
    and (orientation: landscape) {
+
+     .maps {
+       max-width: 100%;
+     }
+
      .pagetitle {
     font-size: 60px;
     margin-bottom: 20px;

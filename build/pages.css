@@ -533,6 +533,28 @@ h6 {
   font-size: 18px;
   overflow: visible;
 }
+.place_desc a {
+  white-space: nowrap;
+}
+.place_desc h6 {
+  font-family: var(--font-grande);
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--gold);
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
+  margin-top: 52px;
+  margin-bottom: 16px;
+  margin-left: 8px;
+}
+.place_desc h6 img {
+  vertical-align: middle;
+  display: inline-block;
+  height: 30px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
 .place_desc .back {
   position: relative;
   float: left;
@@ -613,11 +635,19 @@ h6 {
 .place_desc a:hover {
   color: var(--gold);
 }
+.place_desc .maps {
+  margin-top: 20px;
+  max-width: 60%;
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .place_desc {
     margin-top: 10vh;
     margin-left: 9vw;
     font-size: 18px;
+  }
+  .place_desc .maps {
+    max-width: 100%;
   }
   .place_desc p {
     width: 100%;
@@ -671,6 +701,9 @@ h6 {
   }
 }
 @media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .place_desc .maps {
+    max-width: 100%;
+  }
   .place_desc .pagetitle {
     font-size: 60px;
     margin-bottom: 20px;
