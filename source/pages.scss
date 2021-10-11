@@ -312,6 +312,11 @@ footer {
 
 #img_prev {
   background-position: center center;
+  background-repeat: no-repeat;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
   background-size: cover;
 }
 
@@ -577,7 +582,7 @@ z-index: 0;
       .placetitle {
         font-size: 60px;
       }
-      
+
       .jp {
         font-size: 18px;
         margin-top: 0px;
