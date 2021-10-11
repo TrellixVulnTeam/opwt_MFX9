@@ -62,8 +62,8 @@
   </span>
 
 <div class="preview">
-  <div class="img_prev">
-<img src="../build/src/foosha.png" alt="foosha village">
+  <div class="img_prev" id="img_prev">
+<!--<img src="../build/src/foosha.png" alt="foosha village">-->
   </div>
 <div class="shader"></div>
     <div class="separator"></div>
@@ -83,7 +83,7 @@
     <div class="place_desc">
 
 
-      <p>Foosha village is the rufy's birthplace located in <a href="#">Down Island</a>. <br>
+      <p>Foosha village is the rufy's birthplace located in <a href="#">Down Island</a>. <br> It literally means <i>"Windmill Village"</i> and it's a small port town in the <a href="#">Goa Kingdom</a>.<br>
          Next to the village are located:
          <a href="#">Gray terminal</a>,
          <a href="#">Monte Colubo</a>,
@@ -111,6 +111,9 @@
         var part = url.split("opwt");
         var iturl = part[0] + check + aggiunta + part[1];
 
+        var place = url.split("island/");
+        var placepage = place[1].replace(".html","");
+
         $(window).on('load', function() {
           $(".caricamento").fadeOut("slow");
           if (localStorage.getItem('language') == null) {
@@ -133,6 +136,8 @@
       $('#btt').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
       });
+
+      $('#img_prev').css('background-image', 'url(../build/src/' + placepage + '.png)');
 
       function openNav() {
       $('#myNav').css('left','0%');
