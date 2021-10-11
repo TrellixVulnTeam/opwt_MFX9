@@ -90,6 +90,8 @@
          <a href="#">Midway Forest</a> and the
          <a href="#">Goa Kingdom</a>.</p>
 
+         <p id="path"></p>
+
 
       <footer>
         <p class="btt" id="btt">Back to top</p>
@@ -138,6 +140,7 @@
       });
 
       $('#img_prev').css('background-image', 'url(../build/src/' + placepage + '.png)');
+      $('#path').text('la path è ' + placepage );
 
       function openNav() {
       $('#myNav').css('left','0%');
