@@ -635,10 +635,18 @@ h6 {
 .place_desc a:hover {
   color: var(--gold);
 }
-.place_desc .maps {
+.place_desc .maps, .place_desc .img_main {
   margin-top: 20px;
   max-width: 60%;
   margin-bottom: 20px;
+}
+.place_desc .maps img, .place_desc .img_main img {
+  margin-top: 8px;
+  max-width: 100%;
+}
+.place_desc .maps p, .place_desc .img_main p {
+  opacity: 0.6;
+  font-size: 16px;
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .place_desc {
@@ -681,6 +689,19 @@ h6 {
     font-size: 24px;
   }
   .place_desc a {
+    font-size: 16px;
+  }
+  .place_desc .maps, .place_desc .img_main {
+    margin-top: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .place_desc .maps img, .place_desc .img_main img {
+    margin-top: 8px;
+    max-width: 100%;
+  }
+  .place_desc .maps p, .place_desc .img_main p {
+    opacity: 0.6;
     font-size: 16px;
   }
 }
