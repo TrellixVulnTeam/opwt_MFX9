@@ -616,11 +616,10 @@ h6 {
   padding-left: 0px;
 }
 .place_desc ul {
-  padding: 0px 0px 0px 20px;
+  margin: 20px 0px 20px 8px;
 }
 .place_desc li {
-  list-style: none;
-  color: var(--gold);
+  list-style: circle;
 }
 .place_desc a {
   text-decoration: none;
@@ -630,7 +629,6 @@ h6 {
   font-weight: 600;
   line-height: 1.7;
   transition: all 0.3s ease-out;
-  padding-left: 40px;
 }
 .place_desc a:hover {
   color: var(--gold);
@@ -643,11 +641,14 @@ h6 {
 .place_desc .maps img, .place_desc .img_main img {
   margin-top: 8px;
   max-width: 100%;
+  border-radius: 4px;
 }
 .place_desc .maps p, .place_desc .img_main p {
   opacity: 0.6;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2;
+  margin-top: 4px;
+  margin-left: 8px;
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .place_desc {
@@ -664,6 +665,21 @@ h6 {
   }
   .place_desc a {
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .place_desc .maps, .place_desc .img_main {
+    margin-top: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .place_desc .maps img, .place_desc .img_main img {
+    margin-top: 8px;
+    max-width: 100%;
+  }
+  .place_desc .maps p, .place_desc .img_main p {
+    opacity: 0.6;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 480px) and (orientation: portrait) {
@@ -747,6 +763,19 @@ h6 {
   }
   .place_desc a {
     font-size: 18px;
+  }
+  .place_desc .maps, .place_desc .img_main {
+    margin-top: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .place_desc .maps img, .place_desc .img_main img {
+    margin-top: 8px;
+    max-width: 100%;
+  }
+  .place_desc .maps p, .place_desc .img_main p {
+    opacity: 0.6;
+    font-size: 16px;
   }
 }
 
