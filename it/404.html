@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -7,6 +7,17 @@
   <body>
     Ops! <br>
     something went wrong...
-    <a href="./index.html">back to home</a>
+    <!--sembra che il log pose non stia funzionando molto bene, continuando per questa rotta mi sa che non troveremo nessuna isola.-->
+    <a href="" id='back'>back </a>
   </body>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+$('a#back').on('click', function() {
+  window.history.back();
+  return false;
+});
+</script>
 </html>

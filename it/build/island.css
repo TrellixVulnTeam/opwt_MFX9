@@ -115,31 +115,46 @@ body {
 }
 .islands_list {
   position: relative;
-  width: calc(82% - 90px);
+  width: calc(82vw - 90px);
   height: fit-content;
   text-align: left;
-  margin-top: 5%;
-  margin-left: calc(9% + 90px);
+  margin-top: 10vh;
+  margin-left: calc(9vw + 90px);
   font-size: 18px;
+  overflow: visible;
 }
 .islands_list .pagetitle {
+  clear: both;
+  position: relative;
   font-size: 120px;
-  opacity: 0.8;
   color: var(--gold);
   font-family: var(--font-grande);
   line-height: 1;
   margin-bottom: 20px;
-  margin-top: 5%;
+  width: fit-content;
+  z-index: 3;
 }
 .islands_list .lettere {
   font-family: var(--font-grande);
   font-size: 30px;
   font-weight: 300;
-  margin-top: 15px;
+  margin-top: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  opacity: 0.6;
+}
+.islands_list .lettere img {
+  height: 1em;
+  margin-right: 4px;
+  vertical-align: middle;
+  display: inline-block;
 }
 .islands_list p {
   width: 60%;
   font-size: 18px;
+}
+.islands_list p a {
+  padding-left: 0px;
 }
 .islands_list ul {
   padding: 0px 0px 0px 20px;
@@ -153,7 +168,7 @@ body {
   color: var(--black);
   font-family: var(--font-primary);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.7;
   transition: all 0.3s ease-out;
   padding-left: 40px;
@@ -163,8 +178,8 @@ body {
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .islands_list {
-    margin-top: 5%;
-    margin-left: 9%;
+    margin-top: 10vh;
+    margin-left: 9vw;
     font-size: 18px;
   }
   .islands_list p {
@@ -177,9 +192,9 @@ body {
 }
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .islands_list {
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
+    width: 90vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
     font-size: 16px;
   }
   .islands_list .pagetitle {
@@ -204,9 +219,9 @@ body {
 }
 @media screen and (max-device-width: 1400px) and (min-device-width: 1024px) and (orientation: landscape) {
   .islands_list {
-    width: calc(82% - 90px);
-    margin-top: 5%;
-    margin-left: calc(9% + 90px);
+    width: calc(82vw - 90px);
+    margin-top: 10vh;
+    margin-left: calc(9vw + 90px);
   }
   .islands_list .lettere {
     font-size: 30px;
