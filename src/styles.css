@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+.card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl relative duration-150;
+}
+
+.badge {
+    @apply bg-yellow-500 text-white font-light py-3 px-6 absolute rounded-l-full my-4 top-0 right-0;
+}
+
+.btn {
+    @apply rounded-full font-corpo bg-primary border-2 text-secondary border-transparent hover:bg-secondary hover:text-white active:bg-white active:text-secondary active:border-secondary font-semibold py-3 px-6 cursor-pointer uppercase tracking-wide duration-150;
+}
+
+.btn-empty {
+    @apply rounded-full font-corpo text-primary border-2 border-primary hover:bg-secondary hover:text-white hover:border-transparent active:bg-white active:text-secondary active:border-secondary font-semibold py-3 px-6 cursor-pointer uppercase tracking-wide duration-150;
+}
+
+.menu-items {
+    @apply inline-block py-4 px-8 hover:px-16 hover:text-primary duration-300 box-border;
+}
